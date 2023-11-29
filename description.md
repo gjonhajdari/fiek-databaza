@@ -128,7 +128,11 @@ Edhe 5 ose me shume detaje rreth aplikacionit
 - Studenti
 - Gjuha
 
-#### 
+#### Saved posts
+
+- ID
+- Studenti
+- Postimi
 
 ## Queries
 
@@ -144,13 +148,13 @@ Edhe 5 ose me shume detaje rreth aplikacionit
 5. Listoni top 5 kompanitë/institucionet me numër maksimal të pozitave të shpallura në dy muajt e fundit. Lista të paraqes të dhënat e kompanive/institucioneve (emrin, qytetin dhe email-in) duke përfshirë edhe numrin e pozitave të shpallura.
 6. Paraqitni top 3 pozitat në të cilat kanë aplikuar numër maksimal i studentëve (më së shumti) të cilët kanë së paku katër projekte të regjistruara në bazën e të dhënave. Lista të përmbaj këto të dhëna:
 
-	- titulli i pozitës
-	- emri i kompanisë që ka shpallur pozitën
-	- numri i studentëve që kanë aplikuar
-	- numri i pëlqimeve
-	- numri i komenteve
-	- numri i shpërndarjeve
-	- data e publikimit të pozitës
+   - titulli i pozitës
+   - emri i kompanisë që ka shpallur pozitën
+   - numri i studentëve që kanë aplikuar
+   - numri i pëlqimeve
+   - numri i komenteve
+   - numri i shpërndarjeve
+   - data e publikimit të pozitës
 
 ## Fazat e dorezimit
 
