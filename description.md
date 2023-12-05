@@ -90,6 +90,7 @@ Baze e te dhenave per aplikacion per studente qe kerkojne pune dhe punedhenes qe
 
 - Postimi
 - Autori
+- Teksti
 - Koha
 - Numri i pelqimeve (likes)
 
