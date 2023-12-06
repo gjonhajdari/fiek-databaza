@@ -1,0 +1,19 @@
+(1, 'Campus Sustainability Initiative', '2022-03-01', ' 2022-06-30', 'University of Prishtina, Faculty of Environmental Science', 'Prishtina, Kosovo', 'Implemented a comprehensive sustainability project on campus, including waste reduction measures, energy-efficient initiatives, and awareness campaigns to promote eco-friendly practices.',  'Junior Software Developer', 'www.xyz-ecommerce.com');
+
+(2, 'E-commerce Platform Development', '2022-09-15', '2022-12-20', 'XYZ Tech Solutions, Company', 'Prishtina, Kosovo', 'Collaborated on the development of a robust e-commerce platform, incorporating secure payment gateways, inventory management, and user-friendly interfaces to enhance the online shopping experience.', 'Junior Software Developer', 'www.xyz-ecommerce.com');
+
+(3, 'Community Health Outreach Program', '2023-01-10', '2023-04-30', 'University of Prishtina, Faculty of Medicine', 'Rural Health Clinics, Kosovo', 'Executed a health outreach program in rural areas, providing medical services, health education workshops, and distributing essential healthcare resources to underserved communities.', 'Medical Student Volunteer', 'N/A (NOT AVAILABLE)');
+
+(4, 'Renewable Energy Research Project', '2023-04-01', '2023-08-31', 'Kosovo Energy Research Institute, Research Center', 'Prishtina, Kosovo', 'Conducted research on the feasibility of implementing renewable energy sources in Kosovo, analyzing solar and wind potential, and proposing sustainable energy solutions for the region.', 'Research Assistant', 'www.keri-research.org,');
+
+(5, 'Language Learning App Development', '2022-06-01', '2022-09-30', 'University of Prishtina, Faculty of Philology', 'Prishtina, Kosovo', 'Led the development of a language learning app, incorporating interactive lessons, quizzes, and pronunciation exercises to facilitate language acquisition for users.', 'Project Manager', 'www.language-master-app.com');
+
+(6, 'Cybersecurity Awareness Campaign', '2022-10-15', '2022-12-15', 'University of Prishtina, Faculty of Computer Science',  'Prishtina, Kosovo', 'Launched an awareness campaign on campus to educate students and faculty about cybersecurity threats, best practices, and the importance of maintaining digital privacy.',  'Cybersecurity Advocate', 'N/A',);
+
+(7, 'Urban Planning and Development Project', '2023-01-05', '2023-05-31', 'Municipality of Prishtina, Urban Planning Department', 'Prishtina, Kosovo', 'Contributed to an urban planning initiative, conducting research on sustainable city development, proposing zoning regulations, and collaborating with architects to design innovative urban spaces.', 'Urban Planning Intern', 'www.prishtina-urban-planning.org)'
+
+(8, 'Mobile Health Clinic Implementation',  '2023-02-10', '2023-06-30', 'Ministry of Health', 'Government of Kosovo Rural and Underserved Areas, Kosovo', 'Coordinated the implementation of a mobile health clinic to provide essential medical services, vaccinations, and health consultations in remote areas with limited access to healthcare facilities.', 'Health Outreach Coordinator', 'N/A');
+
+(9, 'Cultural Heritage Preservation Project', '2023-03-15', '2023-08-15', 'National Museum of Kosovo, Conservation Department', 'Prishtina, Kosovo', 'Engaged in the preservation and restoration of cultural artifacts, implementing conservation techniques to safeguard the rich cultural heritage of Kosovo.', 'Conservation Intern', 'www.nationalmuseum-kosovo.org');
+
+(10, 'Financial Literacy Workshop Series', '2023-04-05', '2023-07-15', 'University of Prishtina, Faculty of Economics', 'Prishtina, Kosovo', 'Organized a series of workshops and seminars to enhance financial literacy among students, covering topics such as budgeting, investment strategies, and financial planning for the future.', 'Workshop Coordinator', 'N/A');
