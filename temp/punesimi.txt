@@ -1,0 +1,10 @@
+(1, 4, 'Junior Front-End Developer', 'Gjirafa Inc.', 'Remote', '2019-09-15', '2021-06-30'),
+(2, 4, 'Senior Front-End Developer', 'Gjirafa Inc.', 'Prishtinë', '2021-07-01', '2023-11-30'),
+(3, 10, 'Software Developer', 'Tech Innovations Ltd.', 'Prishtinë', '2022-03-15', '2022-08-15'),
+(4, 5, 'Marketing Intern', 'Digital Marketing Agency', 'Prishtinë', '2022-05-01', '2022-10-01'),
+(5, 1, 'Data Analyst', 'Data Analytics Inc.', 'Ferizaj', '2022-02-10', '2022-07-10'),
+(6, 10, 'Graphic Designer', 'Creative Designs Studio', 'Remote', '2022-04-20', '2022-09-20'),
+(7, 3, 'Research Assistant', 'Science Research Institute', 'Pejë', '2022-01-15', '2022-06-15'),
+(8, 2, 'Human Resources Coordinator', 'Corporate Solutions Ltd.', 'Prishtinë', '2022-06-05', '2022-11-05'),
+(9, 8, 'IT Support Specialist', 'IT Solutions Corp.', 'Mitrovicë', '2022-03-01', '2022-08-01'),
+(10, 9, 'Finance Intern', 'Financial Services Group', 'Ferizaj', '2022-07-10', '2022-12-10');
