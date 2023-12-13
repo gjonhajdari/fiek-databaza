@@ -1,0 +1,59 @@
+(1, 1, 1, 
+'This post on job interviews is too basic. Everyone knows you should dress well and be confident. Nothing groundbreaking here.', 
+221, 150, 
+'2023-02-02'
+)
+
+(2, 2, 2, 
+'The post about overcoming job search burnout really resonated with me. It's tough out there, and these strategies are a breath of fresh air. Great advice!', 
+120, 150, 
+'2023-06-24'
+)
+
+(3, 3, 3, 
+'Soft skills? Seriously? I just want a job that pays well. This touchy-feely stuff won't put food on the table.', 
+50, 10, 
+'2022-12-12'
+)
+
+(4, 4, 4, 
+'Remote work pros and cons are well-balanced. This helps individuals make informed decisions about whether remote work is the right fit for them. Great perspective!', 
+3, 73, 
+'2022-09-29'
+)
+
+(5, 5, 5, 
+'The post on overcoming job search burnout is just a list of generic motivational quotes. Not helpful at all. Waste of time reading this.', 
+112, 52, 
+'2023-10-19'
+)
+
+(6, 6, 6, 
+'Remote work is just an excuse for people to slack off. This post is overly optimistic about the benefits. It\'s not all rainbows and butterflies.', 
+8, 87, 
+'2023-05-01'
+)
+
+(7, 7, 7, 
+'The strategies mentioned here are practical and realistic. It's comforting to know that others have faced job search burnout and found effective ways to overcome it. Solid advice!', 
+76, 60, 
+'2022-04-23'
+)
+
+(8, 8, 8, 
+'The gig economy is a disaster. This post makes it sound like it's all sunshine and rainbows. Freelancers struggle with job insecurity and unstable income. This post is misleading.', 
+232, 68, 
+'2023-03-28'
+)
+
+(9, 9, 9, 
+'Emphasizing the importance of continuous learning is spot-on. This post motivates me to invest in my skills for long-term career growth. Great insights!', 
+13, 0, 
+'2022-10-10'
+)
+
+(10, 10, 10, 
+'Work-life balance is a luxury for the privileged. Not everyone can afford to 'balance' when they're struggling to make ends meet. This post is out of touch with reality.', 
+23, 4, 
+'2023-12-12'
+)
