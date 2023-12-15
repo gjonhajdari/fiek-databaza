@@ -1,7 +1,9 @@
-CREATE DATABASE application;
+CREATE DATABASE IF NOT EXISTS application;
+
+USE application;
 
 -- student table
-CREATE TABLE application.student (
+CREATE TABLE IF NOT EXISTS student (
   student_id INT(9) NOT NULL,
   first_name NVARCHAR(50) NOT NULL,
   last_name NVARCHAR(50) NOT NULL,
