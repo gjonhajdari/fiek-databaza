@@ -19,5 +19,6 @@ CREATE TABLE IF NOT EXISTS student (
   skills VARCHAR(300) NULL,
   hobbies VARCHAR(300) NULL,
   books_movies_music VARCHAR(300) NULL,
-  description VARCHAR(300) NULL
-)
+  description VARCHAR(300) NULL,
+  PRIMARY KEY(student_id)
+);
