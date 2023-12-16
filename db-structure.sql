@@ -42,6 +42,7 @@ create table if not exists `application`.`education` (
 -- project table
 create table if not exists `application`.`project` (
   project_id int not null,
+  student_id int not null,
   project_name nvarchar(100) not null,
   start_date date,
   end_date date,
@@ -50,7 +51,8 @@ create table if not exists `application`.`project` (
   description nvarchar(300) not null,
   role nvarchar(30) not null,
   web_page nvarchar(300) null,
-  primary key (project_id)
+  primary key (project_id),
+  foreign key (student_id) references student (student_id)
 );
 
 -- experience table
