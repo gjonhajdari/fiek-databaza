@@ -1,8 +1,8 @@
-USE application;
+use application;
 
 -- student data
-INSERT INTO student(student_id, first_name, last_name, gender, birthdate, marriage_status, address, phone_number, email_address, username, password, profile_picture, skills, hobbies, books_movies_music, description)
-VALUES
+insert into `application`.`student`(student_id, first_name, last_name, gender, birthdate, marriage_status, address, phone_number, email_address, username, password, profile_picture, skills, hobbies, books_movies_music, description)
+values
 (1, 'Lirim', 'Rexhepi', 'M', '1990-05-15', 'Married', 'Rruga UCK, Pristina, Kosovo, 10000', '+1234567890', 'lirim@example.com', 'lirimRex90', '5d2e19393cc5a0310c49c5b460b4f3f61b0634ab189ab778de253282ba82c6ad', 'profile_picture_1.jpg', 'Engineer', 'Hiking, Photography', 'Technology, Travel', 'Passionate about innovation and exploration.'),
 (2, 'Albiona', 'Berisha', 'F', '1985-08-20', 'Single', 'Rruga Adem Jashari, Gjakova, Kosovo, 50000', '+1987654321', 'albiona@example.com', 'albionaB', '2e2a0cc1d178b6348e9354fe1db7965e15d4d7f51cc321f534e4ee7b35eac623', 'profile_picture_2.jpg', 'Teacher', 'Reading, Painting', 'Education, Art', 'Dedicated to shaping young minds through creativity.'),
 (3, 'Dardan', 'Gashi', 'M', '1978-03-10', 'Divorced', 'Rruga Hasan Prishtina, Peja, Kosovo, 30000', '+9876543210', 'dardan@example.com', 'dardanG78', 'bfc1f66c583c12d5595c3d81e3ee95d07a1b1f0d17e660fb534c243ad76752f0', 'profile_picture_3.jpg', 'Accountant', 'Cooking, Fishing', 'Finance, Outdoors', 'Detail-oriented numbers enthusiast and nature lover.'),
