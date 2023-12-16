@@ -64,3 +64,17 @@ create table if not exists `application`.`experience` (
   end_date date,
   additional_info nvarchar(300) null
 );
+
+-- company table
+create table if not exists `application`.`company` (
+  company_id int not null,
+  company_name nvarchar(100) not null,
+  logo nvarchar(200) not null,
+  email_address nvarchar(320) not null,
+  web_page nvarchar(300) null,
+  employee_count int not null,
+  company_type nvarchar(200) not null,
+  established_year year not null,
+  address nvarchar(100) not null,
+  map_location nvarchar(320) null
+);
