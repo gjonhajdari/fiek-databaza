@@ -52,3 +52,15 @@ create table if not exists `application`.`project` (
   web_page nvarchar(300) null,
   primary key (project_id)
 );
+
+-- experience table
+create table if not exists `application`.`experience` (
+  experience_id int not null,
+  student_id int not null,
+  title nvarchar(100) not null,
+  company_name nvarchar(100) not null,
+  location nvarchar(50) not null,
+  start_date date,
+  end_date date,
+  additional_info nvarchar(300) null
+);
