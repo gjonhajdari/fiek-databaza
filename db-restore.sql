@@ -1,12 +1,12 @@
--- Clearing all the fields
-TRUNCATE TABLE application.student;
-TRUNCATE TABLE application.education;
-TRUNCATE TABLE application.project;
+-- clearing all the fields
+truncate table application.student;
+truncate table application.education;
+truncate table application.project;
 
--- Deleting the tables
-DROP TABLE application.student;
-DROP TABLE application.education;
-DROP TABLE application.project;
+-- deleting the tables
+drop table application.student;
+drop table application.education;
+drop table application.project;
 
--- Deleting the entire database
-DROP DATABASE application;
+-- deleting the entire database
+drop database application;

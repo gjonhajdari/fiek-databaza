@@ -1,54 +1,54 @@
-CREATE DATABASE IF NOT EXISTS application;
+create database if not exists `application`;
 
-USE application;
+use `application`;
 
 -- student table
-CREATE TABLE IF NOT EXISTS student (
-  student_id INT NOT NULL,
-  first_name NVARCHAR(50) NOT NULL,
-  last_name NVARCHAR(50) NOT NULL,
-  gender CHAR(1) NOT NULL,
-  birthdate DATE NOT NULL,
-  marriage_status VARCHAR(8) NOT NULL,
-  address NVARCHAR(100) NOT NULL,
-  phone_number VARCHAR(20) NOT NULL,
-  email_address VARCHAR(320) NOT NULL,
-  username VARCHAR(32) NOT NULL,
-  password CHAR(64) NOT NULL,
-  profile_picture VARCHAR(100) NULL,
-  skills VARCHAR(300) NULL,
-  hobbies VARCHAR(300) NULL,
-  books_movies_music VARCHAR(300) NULL,
-  description VARCHAR(300) NULL,
-  PRIMARY KEY (student_id)
+create table if not exists `application`.`student` (
+  student_id int not null,
+  first_name nvarchar(50) not null,
+  last_name nvarchar(50) not null,
+  gender char(1) not null,
+  birthdate date not null,
+  marriage_status varchar(8) not null,
+  address nvarchar(100) not null,
+  phone_number varchar(20) not null,
+  email_address varchar(320) not null,
+  username varchar(32) not null,
+  password char(64) not null,
+  profile_picture varchar(100) null,
+  skills varchar(300) null,
+  hobbies varchar(300) null,
+  books_movies_music varchar(300) null,
+  description varchar(300) null,
+  primary key (student_id)
 );
 
 -- education table
-CREATE TABLE IF NOT EXISTS education (
-  education_id INT NOT NULL,
-  student_id INT NOT NULL,
-  institution NVARCHAR(30) NOT NULL,
-  field_of_study NVARCHAR(50) NOT NULL,
-  start_date DATE NOT NULL,
-  end_date DATE NULL,
-  diploma_file VARCHAR(100) NULL,
-  degree VARCHAR(100) NULL,
-  study_area VARCHAR(50) NULL,
-  mentor NVARCHAR(300) NULL,
-  PRIMARY KEY (education_id),
-  FOREIGN KEY (student_id) REFERENCES student(student_id)
+create table if not exists `application`.`education` (
+  education_id int not null,
+  student_id int not null,
+  institution nvarchar(30) not null,
+  field_of_study nvarchar(50) not null,
+  start_date date not null,
+  end_date date null,
+  diploma_file varchar(100) null,
+  degree varchar(100) null,
+  study_area varchar(50) null,
+  mentor nvarchar(300) null,
+  primary key (education_id),
+  foreign key (student_id) references student(student_id)
 );
 
 -- project table
-CREATE TABLE IF NOT EXISTS project (
-  project_id INT NOT NULL,
-  project_name NVARCHAR(100) NOT NULL,
-  start_date DATE,
-  end_date DATE,
-  institution NVARCHAR(50) NOT NULL,
-  location NVARCHAR(50) NOT NULL,
-  description NVARCHAR(300) NOT NULL,
-  role NVARCHAR(30) NOT NULL,
-  web_page NVARCHAR(300) NULL,
-  PRIMARY KEY (project_id)
+create table if not exists `application`.`project` (
+  project_id int not null,
+  project_name nvarchar(100) not null,
+  start_date date,
+  end_date date,
+  institution nvarchar(50) not null,
+  location nvarchar(50) not null,
+  description nvarchar(300) not null,
+  role nvarchar(30) not null,
+  web_page nvarchar(300) null,
+  primary key (project_id)
 );
