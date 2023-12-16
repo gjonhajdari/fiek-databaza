@@ -4,7 +4,7 @@ use `application`;
 
 -- student table
 create table if not exists `application`.`student` (
-  student_id int not null,
+  student_id int not null auto_increment,
   first_name nvarchar(50) not null,
   last_name nvarchar(50) not null,
   gender char(1) not null,
@@ -62,7 +62,9 @@ create table if not exists `application`.`experience` (
   location nvarchar(50) not null,
   start_date date,
   end_date date,
-  additional_info nvarchar(300) null
+  additional_info nvarchar(300) null,
+  primary key (experience_id),
+  foreign key (student_id) references student(student_id)
 );
 
 -- company table
@@ -77,4 +79,5 @@ create table if not exists `application`.`company` (
   established_year year not null,
   address nvarchar(100) not null,
   map_location nvarchar(320) null
+  primary key (company_id),
 );
