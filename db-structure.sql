@@ -23,6 +23,7 @@ CREATE TABLE IF NOT EXISTS student (
   PRIMARY KEY (student_id)
 );
 
+-- education table
 CREATE TABLE IF NOT EXISTS education (
   education_id INT NOT NULL,
   student_id INT NOT NULL,
@@ -36,4 +37,18 @@ CREATE TABLE IF NOT EXISTS education (
   mentor NVARCHAR(300) NULL,
   PRIMARY KEY (education_id),
   FOREIGN KEY (student_id) REFERENCES student(student_id)
+);
+
+-- project table
+CREATE TABLE IF NOT EXISTS project (
+  project_id INT NOT NULL,
+  project_name NVARCHAR(100) NOT NULL,
+  start_date DATE,
+  end_date DATE,
+  institution NVARCHAR(50) NOT NULL,
+  location NVARCHAR(50) NOT NULL,
+  description NVARCHAR(300) NOT NULL,
+  role NVARCHAR(30) NOT NULL,
+  web_page NVARCHAR(300) NULL,
+  PRIMARY KEY (project_id)
 );
