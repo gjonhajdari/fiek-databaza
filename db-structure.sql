@@ -36,7 +36,7 @@ create table if not exists `application`.`education` (
   study_area nvarchar(50) null,
   mentor nvarchar(300) null,
   primary key (education_id),
-  foreign key (student_id) references student(student_id)
+  foreign key (student_id) references student (student_id)
 );
 
 -- project table
@@ -64,7 +64,7 @@ create table if not exists `application`.`experience` (
   end_date date,
   additional_info nvarchar(300) null,
   primary key (experience_id),
-  foreign key (student_id) references student(student_id)
+  foreign key (student_id) references student (student_id)
 );
 
 -- company table
@@ -78,6 +78,21 @@ create table if not exists `application`.`company` (
   company_type nvarchar(200) not null,
   established_year year not null,
   address nvarchar(100) not null,
-  map_location nvarchar(320) null
-  primary key (company_id),
+  map_location nvarchar(320) null,
+  primary key (company_id)
+);
+
+-- post table
+create table if not exists `application`.`post` (
+  post_id int not null,
+  company_id int not null,
+  title nvarchar(100) not null,
+  description text not null,
+  required_skills text not null,
+  desired_skills text not null,
+  location nvarchar(50) not null,
+  post_date date not null,
+  application_deadline date not null,
+  primary key (post_id),
+  foreign key (company_id) references company (company_id)
 );
