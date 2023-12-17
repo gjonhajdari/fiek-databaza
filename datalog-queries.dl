@@ -2,5 +2,6 @@
 T1(SID) :- Project(PID,SID,PN,SD,ED,I,L,D,R,W).
 
 Result(SID,FN,LN) :-
-  Student(SID,FN,LN,G,M,A,PH,E,U,PA,S,H,B,D), A = "Prishtinë",
-  not T1(SID).
+  Student(SID,FN,LN,G,M,A,PH,E,U,PA,S,H,B,D), A = "Prishtinë", not T1(SID).
+
+
