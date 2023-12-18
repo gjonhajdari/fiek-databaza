@@ -16,10 +16,10 @@ create table if not exists `application`.`student` (
   username nvarchar(32) not null,
   password char(64) not null,
   profile_picture nvarchar(100) null,
-  skills nvarchar(300) null,
-  hobbies nvarchar(300) null,
-  books_movies_music nvarchar(300) null,
-  description nvarchar(300) null,
+  skills nvarchar(300),
+  hobbies nvarchar(300),
+  books_movies_music nvarchar(300),
+  description nvarchar(300),
   primary key (student_id)
 );
 
@@ -30,11 +30,11 @@ create table if not exists `application`.`education` (
   institution nvarchar(30) not null,
   field_of_study nvarchar(50) not null,
   start_date date not null,
-  end_date date null,
-  diploma_file nvarchar(100) null,
-  degree nvarchar(100) null,
-  study_area nvarchar(50) null,
-  mentor nvarchar(300) null,
+  end_date date,
+  diploma_file nvarchar(100),
+  degree nvarchar(100),
+  study_area nvarchar(50),
+  mentor nvarchar(300),
   primary key (education_id),
   foreign key (student_id) references student (student_id)
 );
@@ -50,7 +50,7 @@ create table if not exists `application`.`project` (
   location nvarchar(50) not null,
   description nvarchar(300) not null,
   role nvarchar(30) not null,
-  web_page nvarchar(300) null,
+  web_page nvarchar(300),
   primary key (project_id),
   foreign key (student_id) references student (student_id)
 );
@@ -64,7 +64,7 @@ create table if not exists `application`.`experience` (
   location nvarchar(50) not null,
   start_date date,
   end_date date,
-  additional_info nvarchar(300) null,
+  additional_info nvarchar(300),
   primary key (experience_id),
   foreign key (student_id) references student (student_id)
 );
@@ -75,12 +75,12 @@ create table if not exists `application`.`company` (
   company_name nvarchar(100) not null,
   logo nvarchar(200) not null,
   email_address nvarchar(320) not null,
-  web_page nvarchar(300) null,
+  web_page nvarchar(300),
   employee_count int not null,
   company_type nvarchar(200) not null,
   established_year year not null,
   address nvarchar(100) not null,
-  map_location nvarchar(320) null,
+  map_location nvarchar(320),
   primary key (company_id)
 );
 
@@ -117,7 +117,7 @@ create table if not exists `application`.`repost` (
   repost_id int not null,
   post_id int not null,
   author_id int not null,
-  content text null,
+  content text,
   timestamp datetime not null default current_timestamp,
   like_count int not null default 0,
   primary key (repost_id),
