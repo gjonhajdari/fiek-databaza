@@ -36,7 +36,7 @@ create table if not exists `application`.`education` (
   study_area nvarchar(50),
   mentor nvarchar(300),
   primary key (education_id),
-  foreign key (student_id) references student (student_id)
+  foreign key (student_id) references student(student_id)
 );
 
 -- project table
@@ -52,7 +52,7 @@ create table if not exists `application`.`project` (
   role nvarchar(30) not null,
   web_page nvarchar(300),
   primary key (project_id),
-  foreign key (student_id) references student (student_id)
+  foreign key (student_id) references student(student_id)
 );
 
 -- experience table
@@ -66,7 +66,7 @@ create table if not exists `application`.`experience` (
   end_date date,
   additional_info nvarchar(300),
   primary key (experience_id),
-  foreign key (student_id) references student (student_id)
+  foreign key (student_id) references student(student_id)
 );
 
 -- company table
@@ -96,7 +96,7 @@ create table if not exists `application`.`post` (
   post_date date not null,
   application_deadline date not null,
   primary key (post_id),
-  foreign key (company_id) references company (company_id)
+  foreign key (company_id) references company(company_id)
 );
 
 -- comment table
@@ -108,8 +108,8 @@ create table if not exists `application`.`comment` (
   timestamp datetime not null default current_timestamp,
   like_count int not null default 0,
   primary key (comment_id),
-  foreign key (post_id) references post (post_id),
-  foreign key (author_id) references student (student_id)
+  foreign key (post_id) references post(post_id),
+  foreign key (author_id) references student(student_id)
 );
 
 -- repost table
@@ -121,8 +121,8 @@ create table if not exists `application`.`repost` (
   timestamp datetime not null default current_timestamp,
   like_count int not null default 0,
   primary key (repost_id),
-  foreign key (post_id) references post (post_id),
-  foreign key (author_id) references student (student_id)
+  foreign key (post_id) references post(post_id),
+  foreign key (author_id) references student(student_id)
 )
 
 -- like table
@@ -134,8 +134,8 @@ create table if not exists `application`.`repost` (
   comment_id int, 
   timestamp datetime default current_timestamp,
   primary ket (like_id),
-  foreign key (student_id) references student (student_id),
-  foreign key (post_id) references post (post_id),
-  foreign key (repost_id) references repost (repost_id),
-  foreign key (comment_id) references comment (comment_id),
+  foreign key (student_id) references student(student_id),
+  foreign key (post_id) references post(post_id),
+  foreign key (repost_id) references repost(repost_id),
+  foreign key (comment_id) references comment(comment_id),
 )
