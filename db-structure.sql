@@ -124,3 +124,18 @@ create table if not exists `application`.`repost` (
   foreign key (post_id) references post (post_id),
   foreign key (author_id) references student (student_id)
 )
+
+-- like table
+create table if not exists `application`.`repost` (
+  like_id int not null,
+  student_id int,
+  post_id int,
+  repost_id int,
+  comment_id int, 
+  timestamp datetime default current_timestamp,
+  primary ket (like_id),
+  foreign key (student_id) references student (student_id),
+  foreign key (post_id) references post (post_id),
+  foreign key (repost_id) references repost (repost_id),
+  foreign key (comment_id) references comment (comment_id),
+)
