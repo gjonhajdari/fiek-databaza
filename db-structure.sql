@@ -111,3 +111,16 @@ create table if not exists `application`.`comment` (
   foreign key (post_id) references post (post_id),
   foreign key (author_id) references student (student_id)
 );
+
+-- repost table
+create table if not exists `application`.`repost` (
+  repost_id int not null,
+  post_id int not null,
+  author_id int not null,
+  content text null,
+  timestamp datetime not null default current_timestamp,
+  like_count int not null default 0,
+  primary key (repost_id),
+  foreign key (post_id) references post (post_id),
+  foreign key (author_id) references student (student_id)
+)
