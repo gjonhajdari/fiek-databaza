@@ -132,7 +132,7 @@ create table if not exists `application`.`repost` (
   post_id int,
   repost_id int,
   comment_id int, 
-  timestamp datetime default current_timestamp,
+  timestamp datetime not null default current_timestamp,
   primary ket (like_id),
   foreign key (student_id) references student(student_id),
   foreign key (post_id) references post(post_id),
