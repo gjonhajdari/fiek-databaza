@@ -98,3 +98,16 @@ create table if not exists `application`.`post` (
   primary key (post_id),
   foreign key (company_id) references company (company_id)
 );
+
+-- comment table
+create table if not exists `application`.`comment` (
+  comment_id int not null,
+  post_id int not null,
+  author_id int not null,
+  content text not null,
+  timestamp datetime not null default current_timestamp,
+  like_count int not null default 0,
+  primary key (comment_id),
+  foreign key (post_id) references post (post_id),
+  foreign key (author_id) references student (student_id)
+);
