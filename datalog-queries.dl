@@ -1,8 +1,7 @@
 % Query 1
 T1(SID) :- Project(PID,SID,PN,SD,ED,I,L,D,R,W).
 
-Result(SID,FN,LN) :-
-  Student(SID,FN,LN,G,M,A,PH,E,U,PA,S,H,B,D), A = "Prishtinë", not T1(SID).
+Result(SID,FN,LN) :- Student(SID,FN,LN,G,M,A,PH,E,U,PA,S,H,B,D), A = "Prishtinë", not T1(SID).
 
 
 
@@ -13,18 +12,15 @@ T2(SID) :- Comments(CID, SID, PID, PC, CD), Shares(SHID, SID, PID, SM, SD).
 
 Result(SID, FN, LN) :-
   Student(SID, FN, LN, G, M, A, PH, E, U, PA, S, H, B, D),
-  (T2(SID); Comments(CID, SID, PID, PC, CD), Shares(SHID, SID, PID, SM, SD), 
-    CD='Yesterday'; CD='Today').
+  (T2(SID) :- Comments(CID, SID, PID, PC, CD), Shares(SHID, SID, PID, SM, SD), CD='Yesterday'; CD='Today').
 
 
 
 % Query 3
-T1(PID) :-Project(PID, SID, PN, SD, ED, I, L, D, R, W), ED='current_month', L="Prishtinë".
-T2(SID, PID) :-Applying (AID, SID, PID, AD)
+T1(PID) :- Project(PID, SID, PN, SD, ED, I, L, D, R, W), ED='current_month', L="Prishtinë".
+T2(SID, PID) :- Applying (AID, SID, PID, AD)
  
-Result(PID, PN, ED, L) :-
-  T1(PID), not T2(SID, PID), 
-  Project(PID, PN, ED, L).
+Result(PID, PN, ED, L) :- T1(PID), not T2(SID, PID), Project(PID, PN, ED, L).
 
 
 
@@ -36,5 +32,5 @@ Result(SID, FN, LN) :-
   Student(SID,FN,LN,G,M,A,PH,E,U,PA,S,H,B,D),
   T1(SID, PID),
   T2(SID,PID),
-  T1(PID) != T2(PID).                         #### PID1 != PID2
+  T1(PID) != T2(PID).
 
