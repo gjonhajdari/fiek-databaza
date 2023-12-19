@@ -7,11 +7,10 @@ Result(SID,FN,LN) :- Student(SID,FN,LN,G,M,A,PH,E,U,PA,S,H,B,D), A = "Prishtinë
 % Query 2
 T1(SID) :- Comments(CID, SID, PID, PC, CD), CD = 'Yesterday'.
 T1(SID) :- Comments(CID, SID, PID, PC, CD), CD = 'Today'.
-T2(SID) :- Comments(CID, SID, PID, PC, CD), Shares(SHID, SID, PID, SM, SD).
+T2(SID) :- Comments(CID, SID, PID, PC, CD), Shares(SHID, SID, PID, SM, SD), CD='Yesterday'; CD='Today'.
 
 Result(SID, FN, LN) :-
-  Student(SID, FN, LN, G, M, A, PH, E, U, PA, S, H, B, D),
-  (T2(SID) :- Comments(CID, SID, PID, PC, CD), Shares(SHID, SID, PID, SM, SD), CD='Yesterday'; CD='Today').
+  Student(SID, FN, LN, G, M, A, PH, E, U, PA, S, H, B, D), T2(SID).
 
 
 % Query 3
