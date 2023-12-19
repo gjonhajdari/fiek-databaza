@@ -18,8 +18,8 @@ create table if not exists `application`.`student` (
   profile_picture nvarchar(100) null,
   skills nvarchar(300),
   hobbies nvarchar(300),
-  books_movies_music nvarchar(300),
-  description nvarchar(300),
+  books_movies_music text,
+  description text,
   primary key (student_id)
 );
 
