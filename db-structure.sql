@@ -126,7 +126,7 @@ create table if not exists `application`.`repost` (
 );
 
 -- like table
-create table if not exists `application`.`repost` (
+create table if not exists `application`.`like` (
   like_id int not null,
   student_id int,
   post_id int,
