@@ -151,3 +151,13 @@ create table if not exists `application`.`volunteering`(
   primary key (volunteering_id),
   foreign key (student_id) references student(student_id) on delete cascade
 );
+
+-- saved post table
+create table if not exists `application`.`saved_post`(
+  saved_id int not null auto_increment,
+  post_id int not null,
+  student_id int not null,
+  primary key (saved_id),
+  foreign key (post_id) references post(post_id) on delete cascade,
+  foreign key (student_id) references student(student_id) on delete cascade
+)
