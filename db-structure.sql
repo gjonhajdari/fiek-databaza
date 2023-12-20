@@ -96,6 +96,7 @@ create table if not exists `application`.`post`(
   location nvarchar(50) not null,
   posted_at datetime not null default current_timestamp,
   application_deadline date not null,
+  like_count int not null default 0,
   primary key (post_id),
   foreign key (company_id) references company(company_id) on delete cascade
 );
