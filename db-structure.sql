@@ -65,7 +65,7 @@ create table if not exists `application`.`experience`(
   location nvarchar(50) not null,
   start_date date,
   end_date date,
-  additional_info nvarchar(300),
+  additional_info text,
   primary key (experience_id),
   foreign key (student_id) references student(student_id) on delete cascade
 );
