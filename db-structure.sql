@@ -104,26 +104,26 @@ create table if not exists `application`.`post`(
 create table if not exists `application`.`comment`(
   comment_id int not null auto_increment,
   post_id int not null,
-  author_id int not null,
+  student_id int not null,
   content text not null,
   commented_at datetime not null default current_timestamp,
   like_count int not null default 0,
   primary key (comment_id),
   foreign key (post_id) references post(post_id) on delete cascade,
-  foreign key (author_id) references student(student_id) on delete cascade
+  foreign key (student_id) references student(student_id) on delete cascade
 );
 
 -- repost table
 create table if not exists `application`.`repost`(
   repost_id int not null auto_increment,
   post_id int not null,
-  author_id int not null,
+  student_id int not null,
   content text,
   reposted_at datetime not null default current_timestamp,
   like_count int not null default 0,
   primary key (repost_id),
   foreign key (post_id) references post(post_id)on delete cascade,
-  foreign key (author_id) references student(student_id) on delete cascade
+  foreign key (student_id) references student(student_id) on delete cascade
 );
 
 -- like table
