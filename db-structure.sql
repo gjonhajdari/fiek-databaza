@@ -46,7 +46,7 @@ create table if not exists `application`.`project`(
   project_name nvarchar(100) not null,
   start_date date,
   end_date date,
-  institution nvarchar(50) not null,
+  institution_name nvarchar(320) not null,
   location nvarchar(50) not null,
   description nvarchar(300) not null,
   role nvarchar(30) not null,
