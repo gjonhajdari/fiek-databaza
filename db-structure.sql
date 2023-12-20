@@ -25,7 +25,7 @@ create table if not exists `application`.`student`(
 
 -- education table
 create table if not exists `application`.`education`(
-  education_id int not null,
+  education_id int not null auto_increment,
   student_id int not null,
   institution nvarchar(30) not null,
   field_of_study nvarchar(50) not null,
@@ -41,7 +41,7 @@ create table if not exists `application`.`education`(
 
 -- project table
 create table if not exists `application`.`project`(
-  project_id int not null,
+  project_id int not null auto_increment,
   student_id int not null,
   project_name nvarchar(100) not null,
   start_date date,
@@ -57,7 +57,7 @@ create table if not exists `application`.`project`(
 
 -- experience table
 create table if not exists `application`.`experience`(
-  experience_id int not null,
+  experience_id int not null auto_increment,
   student_id int not null,
   title nvarchar(100) not null,
   company_name nvarchar(100) not null,
@@ -71,7 +71,7 @@ create table if not exists `application`.`experience`(
 
 -- company table
 create table if not exists `application`.`company`(
-  company_id int not null,
+  company_id int not null auto_increment,
   company_name nvarchar(100) not null,
   logo nvarchar(200) not null,
   email_address nvarchar(320) not null,
@@ -86,7 +86,7 @@ create table if not exists `application`.`company`(
 
 -- post table
 create table if not exists `application`.`post`(
-  post_id int not null,
+  post_id int not null auto_increment,
   company_id int not null,
   title nvarchar(100) not null,
   description text not null,
@@ -101,7 +101,7 @@ create table if not exists `application`.`post`(
 
 -- comment table
 create table if not exists `application`.`comment`(
-  comment_id int not null,
+  comment_id int not null auto_increment,
   post_id int not null,
   author_id int not null,
   content text not null,
@@ -114,7 +114,7 @@ create table if not exists `application`.`comment`(
 
 -- repost table
 create table if not exists `application`.`repost`(
-  repost_id int not null,
+  repost_id int not null auto_increment,
   post_id int not null,
   author_id int not null,
   content text,
@@ -127,7 +127,7 @@ create table if not exists `application`.`repost`(
 
 -- like table
 create table if not exists `application`.`like`(
-  like_id int not null,
+  like_id int not null auto_increment,
   student_id int,
   post_id int,
   repost_id int,
@@ -142,7 +142,7 @@ create table if not exists `application`.`like`(
 
 -- volunteering table
 create table if not exists `application`.`volunteering`(
-  volunteering_id int not null,
+  volunteering_id int not null auto_increment,
   student_id int not null,
   position nvarchar(50) not null,
   company_name nvarchar(100) not null,
