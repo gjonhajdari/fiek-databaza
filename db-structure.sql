@@ -108,7 +108,7 @@ create table if not exists `application`.`comment`(
   commented_at datetime not null default current_timestamp,
   like_count int not null default 0,
   primary key (comment_id),
-  foreign key (post_id) references post(post_id), on delete cascade,
+  foreign key (post_id) references post(post_id) on delete cascade,
   foreign key (author_id) references student(student_id) on delete cascade
 );
 
@@ -121,7 +121,7 @@ create table if not exists `application`.`repost`(
   reposted_at datetime not null default current_timestamp,
   like_count int not null default 0,
   primary key (repost_id),
-  foreign key (post_id) references post(post_id), on delete cascade,
+  foreign key (post_id) references post(post_id)on delete cascade,
   foreign key (author_id) references student(student_id) on delete cascade
 );
 
@@ -134,10 +134,10 @@ create table if not exists `application`.`like`(
   comment_id int, 
   liked_at datetime not null default current_timestamp,
   primary ket (like_id),
-  foreign key (student_id) references student(student_id), on delete cascade,
-  foreign key (post_id) references post(post_id), on delete cascade,
-  foreign key (repost_id) references repost(repost_id), on delete cascade,
-  foreign key (comment_id) references comment(comment_id), on delete cascade
+  foreign key (student_id) references student(student_id) on delete cascade,
+  foreign key (post_id) references post(post_id) on delete cascade,
+  foreign key (repost_id) references repost(repost_id) on delete cascade,
+  foreign key (comment_id) references comment(comment_id) on delete cascade
 );
 
 -- volunteering table
@@ -149,5 +149,5 @@ create table if not exists `application`.`volunteering`(
   start_date date not null,
   end_date date,
   primary key (volunteering_id),
-  foreign key (student_id) references student(student_id)
+  foreign key (student_id) references student(student_id) 
 );
