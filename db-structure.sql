@@ -134,7 +134,7 @@ create table if not exists `application`.`like`(
   post_id int,
   repost_id int,
   comment_id int, 
-  primary ket (like_id),
+  primary key (like_id),
   foreign key (student_id) references student(student_id) on delete cascade,
   foreign key (post_id) references post(post_id) on delete cascade,
   foreign key (repost_id) references repost(repost_id) on delete cascade,
