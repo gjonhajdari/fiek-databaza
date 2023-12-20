@@ -174,3 +174,12 @@ create table if not exists `application`.`applied`(
   foreign key (student_id) references student(student_id) on delete cascade,
   foreign key (post_id) references post(post_id) on delete cascade
 );
+
+-- language table
+create table if not exists `application`.`language`(
+  language_id int not null auto_increment,
+  student_id int not null,
+  language text not null,
+  primary key (language_id),
+  foreign key (student_id) references student(student_id) on delete cascade
+);
