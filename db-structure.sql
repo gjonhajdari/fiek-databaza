@@ -149,5 +149,5 @@ create table if not exists `application`.`volunteering`(
   start_date date not null,
   end_date date,
   primary key (volunteering_id),
-  foreign key (student_id) references student(student_id) 
+  foreign key (student_id) references student(student_id) on delete cascade
 );
