@@ -47,9 +47,9 @@ create table if not exists `application`.`project`(
   start_date date,
   end_date date,
   institution_name nvarchar(320) not null,
-  location nvarchar(50) not null,
-  description nvarchar(300) not null,
-  role nvarchar(30) not null,
+  location nvarchar(100) not null,
+  description text not null,
+  role nvarchar(100) not null,
   web_page nvarchar(300),
   primary key (project_id),
   foreign key (student_id) references student(student_id) on delete cascade
