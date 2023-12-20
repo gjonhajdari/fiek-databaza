@@ -61,6 +61,7 @@ create table if not exists `application`.`experience`(
   student_id int not null,
   title nvarchar(100) not null,
   company_name nvarchar(100) not null,
+  job_type nvarchar(20) not null,
   location nvarchar(50) not null,
   start_date date,
   end_date date,
