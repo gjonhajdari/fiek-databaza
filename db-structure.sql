@@ -27,7 +27,7 @@ create table if not exists `application`.`student`(
 create table if not exists `application`.`education`(
   education_id int not null auto_increment,
   student_id int not null,
-  institution nvarchar(30) not null,
+  institution_name nvarchar(30) not null,
   field_of_study nvarchar(50) not null,
   start_date date not null,
   end_date date,
