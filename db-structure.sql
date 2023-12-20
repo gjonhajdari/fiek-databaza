@@ -161,7 +161,7 @@ create table if not exists `application`.`saved_post`(
   primary key (saved_id),
   foreign key (post_id) references post(post_id) on delete cascade,
   foreign key (student_id) references student(student_id) on delete cascade
-)
+);
 
 -- applied table
 create table if not exists `application`.`applied`(
@@ -171,5 +171,5 @@ create table if not exists `application`.`applied`(
   applied_at datetime not null default current_timestamp,
   primary key (applied_id),
   foreign key (student_id) references student(student_id) on delete cascade,
-  foreign key (post_id) references student(post_id) on delete cascade
-)
+  foreign key (post_id) references post(post_id) on delete cascade
+);
