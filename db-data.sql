@@ -178,3 +178,18 @@ values
 (10, 3, "2022-12-01 18:25"),
 (1, 5, "2023-01-14 07:05"),
 (9, 6, "2022-12-10 22:30");
+
+
+-- language table data
+insert into `application`.`language`(student_id, language)
+values
+(1, 'English, Spanish, French, German, Albanian'),
+(2, 'Mandarin, Japanese, Albanian'),
+(3, 'Russian, Italian, Albanian'),
+(4, 'Portuguese, Albanian'),
+(5, 'Arabic, Spanish, Albanian'),
+(6, 'French, German, Albanian'),
+(7, 'Japanese, Italian, Albanian'),
+(8, 'Albanian, Bosnian, Turkish'),
+(9, 'English, French, Spanish, Albanian'),
+(10, 'Spanish, Albanian');
