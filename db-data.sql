@@ -91,33 +91,33 @@ values
 
 
 -- comment table data
-insert into `application`.`comment`(post_id, student_id, content, reposted_at, like_count)
+insert into `application`.`comment`(post_id, student_id, content, commented_at, like_count)
 values
-(1, 5, "This post on job interviews is too basic. Everyone knows you should dress well and be confident. Nothing groundbreaking here.", 221, "2023-02-02 14:30"),
-(2, 2, "The post about overcoming job search burnout really resonated with me. It's tough out there, and these strategies are a breath of fresh air. Great advice!", 120, "2023-06-24 10:45"),
-(3, 3, "Soft skills? Seriously? I just want a job that pays well. This touchy-feely stuff won't put food on the table.", 50, "2022-12-12 16:20"),
-(4, 4, "Remote work pros and cons are well-balanced. This helps individuals make informed decisions about whether remote work is the right fit for them. Great perspective!", 3, "2022-09-29 09:15"),
-(5, 5, "The post on overcoming job search burnout is just a list of generic motivational quotes. Not helpful at all. Waste of time reading this.", 112, "2023-10-19 11:50"),
-(6, 6, "Remote work is just an excuse for people to slack off. This post is overly optimistic about the benefits. It's not all rainbows and butterflies.", 8, "2023-05-01 08:30"),
-(7, 7, "The strategies mentioned here are practical and realistic. It's comforting to know that others have faced job search burnout and found effective ways to overcome it. Solid advice!", 76, "2022-04-23 14:10"),
-(8, 8, "The gig economy is a disaster. This post makes it sound like it's all sunshine and rainbows. Freelancers struggle with job insecurity and unstable income. This post is misleading.", 232, "2023-03-28 13:25"),
-(9, 9, "Emphasizing the importance of continuous learning is spot-on. This post motivates me to invest in my skills for long-term career growth. Great insights!", 13, "2022-10-10 17:40"),
-(10, 10, "Work-life balance is a luxury for the privileged. Not everyone can afford to balance when they're struggling to make ends meet. This post is out of touch with reality.", 23, "2023-12-12 15:15");
+(1, 5, "This post on job interviews is too basic. Everyone knows you should dress well and be confident. Nothing groundbreaking here.", "2023-02-02 14:30", 221),
+(2, 2, "The post about overcoming job search burnout really resonated with me. It's tough out there, and these strategies are a breath of fresh air. Great advice!", "2023-06-24 10:45", 120),
+(3, 3, "Soft skills? Seriously? I just want a job that pays well. This touchy-feely stuff won't put food on the table.", "2022-12-12 16:20", 50),
+(4, 4, "Remote work pros and cons are well-balanced. This helps individuals make informed decisions about whether remote work is the right fit for them. Great perspective!", "2022-09-29 09:15", 3),
+(5, 5, "The post on overcoming job search burnout is just a list of generic motivational quotes. Not helpful at all. Waste of time reading this.", "2023-10-19 11:50", 112),
+(6, 6, "Remote work is just an excuse for people to slack off. This post is overly optimistic about the benefits. It's not all rainbows and butterflies.", "2023-05-01 08:30", 8),
+(7, 7, "The strategies mentioned here are practical and realistic. It's comforting to know that others have faced job search burnout and found effective ways to overcome it. Solid advice!", "2022-04-23 14:10", 76),
+(8, 8, "The gig economy is a disaster. This post makes it sound like it's all sunshine and rainbows. Freelancers struggle with job insecurity and unstable income. This post is misleading.", "2023-03-28 13:25", 232),
+(9, 9, "Emphasizing the importance of continuous learning is spot-on. This post motivates me to invest in my skills for long-term career growth. Great insights!", "2022-10-10 17:40", 13),
+(10, 10, "Work-life balance is a luxury for the privileged. Not everyone can afford to balance when they're struggling to make ends meet. This post is out of touch with reality.", "2023-12-12 15:15", 23);
 
 
 -- repost table data
 insert into `application`.`repost`(post_id, student_id, content, reposted_at, like_count)
 values
-(1, 5, null, "2023-02-02 11:45"),
-(2, 2, null, "2023-06-24 14:20"),
-(10, 6, "Hey creative minds! I just came across this incredible Graphic Designer position at Creative Designs Kosovo and had to share it with you. If you're a talented designer looking for a new challenge, this could be your next big move!", "2022-12-12 09:30"),
-(4, 4, null, "2022-09-29 16:10"),
-(2, 3, null, "2023-10-19 12:55"),
-(6, 6, null, "2023-05-01 08:15"),
-(7, 10, null, "2022-04-23 13:40"),
-(4, 6, null, "2023-03-28 10:05"),
-(9, 9, null, "2022-10-10 14:25"),
-(8, 6, null, "2023-12-12 15:40");
+(1, 5, null, "2023-02-02 11:45", 127),
+(2, 2, null, "2023-06-24 14:20", 289),
+(10, 6, "Hey creative minds! I just came across this incredible Graphic Designer position at Creative Designs Kosovo and had to share it with you. If you're a talented designer looking for a new challenge, this could be your next big move!", "2022-12-12 09:30", 73),
+(4, 4, null, "2022-09-29 16:10", 215),
+(2, 3, null, "2023-10-19 12:55", 58),
+(6, 6, null, "2023-05-01 08:15", 198),
+(7, 10, null, "2022-04-23 13:40", 104),
+(4, 6, null, "2023-03-28 10:05", 276),
+(9, 9, null, "2022-10-10 14:25", 35),
+(8, 6, null, "2023-12-12 15:40", 149);
 
 
 -- like table data
@@ -138,16 +138,16 @@ values
 -- volunteering table data
 insert into `application`.`volunteering`(student_id, position, company_name, start_date, end_date)
 values
-(10, 'Volunteer Coordinator', 'Future Hope Kosovo', '2023-01-15', '2023-06-30')
-(7, 'Event Assistant', 'Unity Community Center Pristina', '2023-02-10', '2023-05-20')
-(2, 'Community Outreach Specialist', 'Kosova Food Bank', '2023-03-05', '2023-09-15')
-(1, 'Mentorship Program Manager', 'Progress Education Foundation Kosovo', '2023-04-20', '2023-11-30')
-(3, 'Fundraising Coordinator', 'Animal Rescue Kosovo', '2023-05-12', '2023-08-25')
-(4, 'Marketing Volunteer', 'Health First Clinic Prizren', '2023-06-08', '2023-12-10')
-(6, 'Research Assistant', 'Environmental Protection Institute Kosovo', '2023-07-01', '2023-10-18')
-(5, 'Volunteer Trainer', 'Red Cross Kosovo', '2023-08-14', '2024-01-05')
-(8, 'Social Media Manager', 'Youth Empowerment Center Gjilan', '2023-09-19', '2024-02-20')
-(9, 'Administrative Support', 'Elderly Care Foundation Pristina', '2023-10-22', '2024-03-15')
+(10, 'Volunteer Coordinator', 'Future Hope Kosovo', '2023-01-15', '2023-06-30'),
+(7, 'Event Assistant', 'Unity Community Center Pristina', '2023-02-10', '2023-05-20'),
+(2, 'Community Outreach Specialist', 'Kosova Food Bank', '2023-03-05', '2023-09-15'),
+(1, 'Mentorship Program Manager', 'Progress Education Foundation Kosovo', '2023-04-20', '2023-11-30'),
+(3, 'Fundraising Coordinator', 'Animal Rescue Kosovo', '2023-05-12', '2023-08-25'),
+(4, 'Marketing Volunteer', 'Health First Clinic Prizren', '2023-06-08', '2023-12-10'),
+(6, 'Research Assistant', 'Environmental Protection Institute Kosovo', '2023-07-01', '2023-10-18'),
+(5, 'Volunteer Trainer', 'Red Cross Kosovo', '2023-08-14', '2024-01-05'),
+(8, 'Social Media Manager', 'Youth Empowerment Center Gjilan', '2023-09-19', '2024-02-20'),
+(9, 'Administrative Support', 'Elderly Care Foundation Pristina', '2023-10-22', '2024-03-15');
 
 
 -- saved_post table data
