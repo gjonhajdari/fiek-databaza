@@ -22,6 +22,7 @@ create table if not exists `application`.`student`(
   primary key (student_id)
 );
 
+-- skill table
 create table if not exists `application`.`skill`(
   skill_id int not null auto_increment,
   student_id int not null,
