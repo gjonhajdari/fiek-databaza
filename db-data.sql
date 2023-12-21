@@ -1,7 +1,7 @@
 use application;
 
 -- student table data
-insert into `application`.`student`(first_name, last_name, gender, birthdate, marriage_status, address, phone_number, email_address, username, password, profile_picture, skills, hobbies, books_movies_music, description)
+insert into `application`.`student`(first_name, last_name, gender, birthdate, marriage_status, address, phone_number, email_address, username, password, profile_picture, hobbies, books_movies_music, description)
 values
 ("Lirim", "Rexhepi", "M", "1990-05-15", "Married", "Rruga UCK, Pristina, Kosovo, 10000", "+1234567890", "lirim@example.com", "lirimRex90", "5d2e19393cc5a0310c49c5b460b4f3f61b0634ab189ab778de253282ba82c6ad", "profile_picture_1.jpg", "Hiking, Photography", "Technology, Travel", "Passionate about innovation and exploration."),
 ("Albiona", "Berisha", "F", "1985-08-20", "Single", "Rruga Adem Jashari, Gjakova, Kosovo, 50000", "+1987654321", "albiona@example.com", "albionaB", "2e2a0cc1d178b6348e9354fe1db7965e15d4d7f51cc321f534e4ee7b35eac623", "profile_picture_2.jpg", "Reading, Painting", "Education, Art", "Dedicated to shaping young minds through creativity."),
@@ -151,18 +151,18 @@ values
 
 
 -- professional skills data
-insert into 'application'.'professional_skills'(id, student_id, professional_skills)
+insert into `application`.`skill`(student_id, skill_name)
 values
-(1, 2, Engineer),
-(2, 4, Teacher),
-(3, 1, Accountant),
-(4, 3, Graphic Designer),
-(5, 2, Doctor),
-(6, 4, Software Engineer),
-(7, 5, Lawyer),
-(8, 1, Marketing Manager),
-(9, 10, Architect),
-(10, 9, Writer);
+(2, "Engineer"),
+(4, "Teacher"),
+(1, "Accountant"),
+(3, "Graphic Designer"),
+(2, "Doctor"),
+(4, "Software Engineer"),
+(5, "Lawyer"),
+(1, "Marketing Manager"),
+(10, "Architect"),
+(9, "Writer");
 
 
 -- saved_post table data
@@ -181,7 +181,7 @@ values
 
 
 -- applied table data
-insert into `application`.`applied`(student_id, post_id, applied_at)
+insert into `application`.`applied`(student_id, post_id, resume, applied_at)
 values
 (2, 1, "resume_1.pdf", "2022-03-11 08:45"),
 (3, 1, "resume_2.pdf", "2022-03-05 15:20"),

@@ -11,7 +11,7 @@ truncate table application.like;
 truncate table application.volunteering;
 truncate table application.language;
 truncate table application.saved_post;
-truncate table application.professional_skills;
+truncate table application.skill;
 truncate table application.applied;
 
 -- deleting the tables
@@ -27,7 +27,7 @@ drop table application.like;
 drop table application.volunteering;
 drop table application.language;
 drop table application.saved_post;
-drop table application.professional_skills;
+drop table application.skill;
 drop table application.applied;
 
 -- deleting the entire database
