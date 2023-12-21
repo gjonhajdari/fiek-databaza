@@ -27,7 +27,7 @@ DELIMITER ;
 -- Trigger for updating like_count of the respective table when a new like is inserted
 DELIMITER //
 
-CREATE TRIGGER `application`.`update_like_count`
+CREATE TRIGGER `application`.`increment_like_count`
 AFTER INSERT ON `application`.`like`
 FOR EACH ROW
 BEGIN
@@ -46,6 +46,35 @@ BEGIN
         UPDATE `application`.`comment`
         SET like_count = like_count + 1
         WHERE comment_id = NEW.comment_id;
+    END IF;
+END;
+//
+
+DELIMITER ;
+
+
+-- Trigger for updating like_count of the respective table when a like is deleted
+DELIMITER //
+
+CREATE TRIGGER `application`.`decrement_like_count`
+AFTER DELETE ON `application`.`like`
+FOR EACH ROW
+BEGIN
+    IF OLD.post_id IS NOT NULL THEN
+        -- Decrement like_count for a post
+        UPDATE `application`.`post`
+        SET like_count = like_count - 1
+        WHERE post_id = OLD.post_id;
+    ELSEIF OLD.repost_id IS NOT NULL THEN
+        -- Decrement like_count for a repost
+        UPDATE `application`.`repost`
+        SET like_count = like_count - 1
+        WHERE repost_id = OLD.repost_id;
+    ELSEIF OLD.comment_id IS NOT NULL THEN
+        -- Decrement like_count for a comment
+        UPDATE `application`.`comment`
+        SET like_count = like_count - 1
+        WHERE comment_id = OLD.comment_id;
     END IF;
 END;
 //
