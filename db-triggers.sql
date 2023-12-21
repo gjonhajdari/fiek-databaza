@@ -1,9 +1,27 @@
--- CREATE TRIGGER UpdateExperienceYearsOnInsert
--- AFTER INSERT ON EXPERIENCE
--- FOR EACH ROW
--- UPDATE STUDENT
--- SET TotalExperienceYears = TotalExperienceYears + NEW.YearsOfExperience
--- WHERE STUDENT.StudentID = NEW.StudentID;
+-- Trigger that checks if the deadline for a post has passed when applying
+DELIMITER //
+
+CREATE TRIGGER application.check_application_deadline
+BEFORE INSERT ON `application`.`applied`
+FOR EACH ROW
+BEGIN
+    DECLARE deadline_passed BOOLEAN;
+
+    -- Check if the application deadline has passed
+    SELECT TRUE INTO deadline_passed
+    FROM `application`.`post`
+    WHERE post_id = NEW.post_id
+    AND application_deadline < NOW();
+
+    -- If the deadline has passed, raise an error
+    IF deadline_passed THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Application deadline has passed. Cannot apply.';
+    END IF;
+END;
+//
+
+DELIMITER ;
 
 
 -- Trigger for updating like_count of the respective table when a new like is inserted
