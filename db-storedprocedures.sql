@@ -1,3 +1,4 @@
+-- stored procedure for getting student details with education and experience
 DELIMITER //
 
 CREATE PROCEDURE GetStudentDetails(IN studentId INT)
@@ -28,5 +29,18 @@ END //
 
 DELIMITER ;
 
+-- stored procedure for getting all job posts from a company
+DELIMITER //
+
+CREATE PROCEDURE GetPostsByCompany(IN companyId INT)
+BEGIN
+    SELECT * FROM post
+    WHERE company_id = companyId;
+END //
+
+DELIMITER ;
+
+
 -- testing the stored procedure
 CALL GetStudentDetails(2);
+CALL GetPostsByCompany(1);
