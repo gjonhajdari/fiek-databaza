@@ -30,3 +30,23 @@ WHERE p.location = "Prishtinë"
 AND MONTH(p.posted_at) = MONTH(NOW())
 AND YEAR(p.posted_at) = YEAR(NOW())
 AND a.student_id IS NULL;
+
+
+-- 4.
+-- Listoni studentët të cilët dje kanë aplikuar në dy ose më shumë pozita ndërsa sot nuk kanë aplikuar në asnjë pozitë.
+SELECT s.*
+FROM student s
+LEFT JOIN (
+    SELECT student_id
+    FROM applied
+    WHERE DATE(applied_at) = CURDATE()
+) today_apps ON s.student_id = today_apps.student_id
+LEFT JOIN (
+    SELECT student_id
+    FROM applied
+    WHERE DATE(applied_at) = CURDATE() - INTERVAL 1 DAY
+    GROUP BY student_id
+    HAVING COUNT(*) >= 2
+) yesterday_apps ON s.student_id = yesterday_apps.student_id
+WHERE yesterday_apps.student_id IS NOT NULL
+  AND today_apps.student_id IS NULL;
