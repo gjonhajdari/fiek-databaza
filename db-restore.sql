@@ -36,6 +36,7 @@ drop trigger if exists application.update_like_count;
 
 -- deleting the stored procedures
 drop procedure if exists GetStudentDetails;
+drop procedure if exists GetPostsByCompany;
 
 -- deleting the entire database
 drop database application;
