@@ -11,12 +11,12 @@ BEGIN
     SELECT TRUE INTO deadline_passed
     FROM `application`.`post`
     WHERE post_id = NEW.post_id
-    AND application_deadline < DATE(NEW.applied_at);
+    AND DATE(application_deadline) < DATE(NEW.applied_at);
 
     -- If the deadline has passed, raise an error
     IF deadline_passed THEN
-        SIGNAL SQLSTATE '45000'
-        SET MESSAGE_TEXT = 'Application deadline has passed. Cannot apply.';
+        SIGNAL SQLSTATE "45000"
+        SET MESSAGE_TEXT = "Application deadline has passed. Cannot apply.";
     END IF;
 END;
 //
