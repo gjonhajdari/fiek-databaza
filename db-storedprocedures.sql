@@ -1,13 +1,32 @@
-1_AddNewLanguageToStudent:
-CREATE PROCEDURE AddNewLanguageToStudent(IN studentID INT, IN languageName VARCHAR(255))
-BEGIN
-    INSERT INTO LANGUAGES (StudentID, Language)
-    VALUES (studentID, languageName);
-END;
+DELIMITER //
 
-2_CreateNewPost:
-CREATE PROCEDURE CreateNewPost(IN studentID INT, IN message TEXT)
+CREATE PROCEDURE GetStudentDetails(IN studentId INT)
 BEGIN
-    INSERT INTO POST (StudentID, Message, PostDate)
-    VALUES (studentID, message, NOW());
-END;
+    SELECT
+        s.student_id,
+        s.first_name,
+        s.last_name,
+        e.education_id,
+        e.institution_name,
+        e.field_of_study,
+        e.start_date,
+        e.end_date,
+        ex.experience_id,
+        ex.title,
+        ex.company_name,
+        ex.start_date AS exp_start_date,
+        ex.end_date AS exp_end_date
+    FROM
+        student s
+    LEFT JOIN
+        education e ON s.student_id = e.student_id
+    LEFT JOIN
+        experience ex ON s.student_id = ex.student_id
+    WHERE
+        s.student_id = studentId;
+END //
+
+DELIMITER ;
+
+-- testing the stored procedure
+CALL GetStudentDetails(2);
