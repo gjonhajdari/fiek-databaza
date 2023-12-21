@@ -153,16 +153,26 @@ values
 -- professional skills data
 insert into `application`.`skill`(student_id, skill_name)
 values
-(2, "Engineer"),
-(4, "Teacher"),
-(1, "Accountant"),
-(3, "Graphic Designer"),
-(2, "Doctor"),
-(4, "Software Engineer"),
-(5, "Lawyer"),
-(1, "Marketing Manager"),
-(10, "Architect"),
-(9, "Writer");
+(5, 'Java Programming'),
+(2, 'Data Analysis'),
+(8, 'Graphic Design'),
+(10, 'Machine Learning'),
+(3, 'Web Development'),
+(1, 'Project Management'),
+(6, 'Digital Marketing'),
+(9, 'Mobile App Development'),
+(4, 'Content Writing'),
+(7, 'Database Management'),
+(5, 'C++ Programming'),
+(10, 'Network Administration'),
+(2, 'UI/UX Design'),
+(9, 'Statistical Analysis'),
+(1, 'Cloud Computing'),
+(8, 'Social Media Management'),
+(3, 'SEO Optimization'),
+(6, 'Financial Modeling'),
+(7, 'Creative Writing'),
+(4, 'Customer Service');
 
 
 -- saved_post table data
