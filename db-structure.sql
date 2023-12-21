@@ -16,7 +16,6 @@ create table if not exists `application`.`student`(
   username nvarchar(32) not null,
   password char(64) not null,
   profile_picture nvarchar(100) null,
-  skills nvarchar(300),
   hobbies nvarchar(300),
   books_movies_music text,
   description text,
