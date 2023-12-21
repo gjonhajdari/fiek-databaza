@@ -32,7 +32,8 @@ drop table `application`.`applied`;
 
 -- deleting the triggers
 drop trigger if exists `application`.`check_application_deadline`;
-drop trigger if exists `application`.`update_like_count`;
+drop trigger if exists `application`.`increment_like_count`;
+drop trigger if exists `application`.`decrement_like_count`;
 
 -- deleting the stored procedures
 drop procedure if exists `application`.`GetStudentDetails`;

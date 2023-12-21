@@ -42,5 +42,5 @@ DELIMITER ;
 
 
 -- testing the stored procedure
-CALL `application`.`GetStudentDetails`(2);
-CALL `application`.`GetPostsByCompany`(1);
+-- CALL `application`.`GetStudentDetails`(2);
+-- CALL `application`.`GetPostsByCompany`(1);
