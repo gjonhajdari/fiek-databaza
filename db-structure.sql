@@ -23,6 +23,14 @@ create table if not exists `application`.`student`(
   primary key (student_id)
 );
 
+create table if not exists `application`.`skill`(
+  skill_id int not null auto_increment,
+  student_id int not null,
+  skill_name nvarchar(50) not null,
+  primary key (skill_id),
+  foreign key (student_id) references student(student_id) on delete cascade
+);
+
 -- education table
 create table if not exists `application`.`education`(
   education_id int not null auto_increment,
@@ -169,6 +177,7 @@ create table if not exists `application`.`applied`(
   applied_id int not null auto_increment,
   student_id int not null,
   post_id int not null,
+  resume nvarchar(100),
   applied_at datetime not null default current_timestamp,
   primary key (applied_id),
   foreign key (student_id) references student(student_id) on delete cascade,
