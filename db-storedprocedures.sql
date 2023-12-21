@@ -1,7 +1,7 @@
 -- stored procedure for getting student details with education and experience
 DELIMITER //
 
-CREATE PROCEDURE GetStudentDetails(IN studentId INT)
+CREATE PROCEDURE `application`.`GetStudentDetails`(IN studentId INT)
 BEGIN
     SELECT
         s.student_id,
@@ -32,7 +32,7 @@ DELIMITER ;
 -- stored procedure for getting all job posts from a company
 DELIMITER //
 
-CREATE PROCEDURE GetPostsByCompany(IN companyId INT)
+CREATE PROCEDURE `application`.`GetPostsByCompany`(IN companyId INT)
 BEGIN
     SELECT * FROM post
     WHERE company_id = companyId;
@@ -42,5 +42,5 @@ DELIMITER ;
 
 
 -- testing the stored procedure
-CALL GetStudentDetails(2);
-CALL GetPostsByCompany(1);
+CALL `application`.`GetStudentDetails`(2);
+CALL `application`.`GetPostsByCompany`(1);

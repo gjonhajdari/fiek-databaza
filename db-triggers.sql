@@ -1,7 +1,7 @@
 -- Trigger that checks if the deadline for a post has passed when applying
 DELIMITER //
 
-CREATE TRIGGER application.check_application_deadline
+CREATE TRIGGER `application`.`check_application_deadline`
 BEFORE INSERT ON `application`.`applied`
 FOR EACH ROW
 BEGIN
@@ -11,7 +11,7 @@ BEGIN
     SELECT TRUE INTO deadline_passed
     FROM `application`.`post`
     WHERE post_id = NEW.post_id
-    AND application_deadline < NOW();
+    AND application_deadline < DATE(NEW.applied_at);
 
     -- If the deadline has passed, raise an error
     IF deadline_passed THEN
@@ -27,7 +27,7 @@ DELIMITER ;
 -- Trigger for updating like_count of the respective table when a new like is inserted
 DELIMITER //
 
-CREATE TRIGGER application.update_like_count
+CREATE TRIGGER `application`.`update_like_count`
 AFTER INSERT ON `application`.`like`
 FOR EACH ROW
 BEGIN
