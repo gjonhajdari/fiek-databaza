@@ -2,11 +2,10 @@ use application;
 
 -- 1.
 -- Listoni të gjithë studentët që janë nga qyteti i Prishtinës të cilët nuk kanë të regjistruar asnjë projekt.
-SELECT * FROM student s
+SELECT s.* FROM student s
+LEFT JOIN applied a ON a.student_id = s.student_id
 WHERE s.address LIKE "%Prishtina%"
-AND s.student_id NOT IN (
-  SELECT student_id FROM applied
-);
+AND a.student_id IS NULL;
 
 -- 2.
 -- Cilët studentë (numrat unik, emrat dhe mbiemrat e tyre) dje dhe sot kanë komentuar dhe kanë shpërndarë (share) ndonjë pozitë?
