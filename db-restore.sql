@@ -30,5 +30,12 @@ drop table application.saved_post;
 drop table application.skill;
 drop table application.applied;
 
+-- deleting the triggers
+drop trigger if exists application.check_application_deadline;
+drop trigger if exists application.update_like_count;
+
+-- deleting the stored procedures
+drop procedure if exists GetStudentDetails;
+
 -- deleting the entire database
 drop database application;
