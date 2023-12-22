@@ -39,5 +39,8 @@ drop trigger if exists `application`.`decrement_like_count`;
 drop procedure if exists `application`.`GetStudentDetails`;
 drop procedure if exists `application`.`GetPostsByCompany`;
 
+-- deleting the functions
+drop function if exists `application`.`CalculateExperience`;
+
 -- deleting the entire database
 drop database `application`;
