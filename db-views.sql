@@ -22,6 +22,7 @@ WHERE
 ORDER BY
     p.posted_at DESC;
 
+
 -- View that shows students and a list of their registered skills
 CREATE VIEW `application`.`student_with_skills` AS
 SELECT
