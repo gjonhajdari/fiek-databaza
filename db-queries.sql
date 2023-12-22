@@ -40,13 +40,13 @@ LEFT JOIN (
     SELECT student_id
     FROM applied
     WHERE DATE(applied_at) = CURDATE()
-) today_apps ON s.student_id = today_apps.student_id
+) applications_today ON s.student_id = applications_today.student_id
 LEFT JOIN (
     SELECT student_id
     FROM applied
     WHERE DATE(applied_at) = CURDATE() - INTERVAL 1 DAY
     GROUP BY student_id
     HAVING COUNT(*) >= 2
-) yesterday_apps ON s.student_id = yesterday_apps.student_id
-WHERE yesterday_apps.student_id IS NOT NULL
-  AND today_apps.student_id IS NULL;
+) applications_yesterday ON s.student_id = applications_yesterday.student_id
+WHERE applications_yesterday.student_id IS NOT NULL
+  AND applications_today.student_id IS NULL;
