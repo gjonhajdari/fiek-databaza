@@ -1,18 +1,18 @@
 use application;
 
 -- student table data
-insert into `application`.`student`(first_name, last_name, gender, birthdate, marriage_status, address, phone_number, email_address, username, password, profile_picture, hobbies, books_movies_music, description)
+insert into `application`.`student`(first_name, last_name, gender, birthdate, marriage_status, phone_number, email_address, username, password, profile_picture, hobbies, books_movies_music, description)
 values
-("Lirim", "Rexhepi", "M", "1990-05-15", "Married", "Rruga UCK, Prishtina, Kosovo, 10000", "+1234567890", "lirim@example.com", "lirimRex90", "5d2e19393cc5a0310c49c5b460b4f3f61b0634ab189ab778de253282ba82c6ad", "profile_picture_1.jpg", "Hiking, Photography", "The Innovators by Walter Isaacson, Inception, Imagine Dragons - Night Visions", "Passionate about innovation and exploration."),
-("Albiona", "Berisha", "F", "1985-08-20", "Single", "Rruga Adem Jashari, Gjakova, Kosovo, 50000", "+1987654321", "albiona@example.com", "albionaB", "2e2a0cc1d178b6348e9354fe1db7965e15d4d7f51cc321f534e4ee7b35eac623", "profile_picture_2.jpg", "Reading, Painting", "To Kill a Mockingbird, The Shawshank Redemption, Adele - 21", "Dedicated to shaping young minds through creativity."),
-("Dardan", "Gashi", "M", "1978-03-10", "Divorced", "Rruga Hasan Prishtina, Peja, Kosovo, 30000", "+9876543210", "dardan@example.com", "dardanG78", "bfc1f66c583c12d5595c3d81e3ee95d07a1b1f0d17e660fb534c243ad76752f0", "profile_picture_3.jpg", "Cooking, Fishing", "The Intelligent Investor by Benjamin Graham, The Godfather, Pink Floyd - Dark Side of the Moon", "Detail-oriented numbers enthusiast and nature lover."),
-("Vjosa", "Ahmeti", "F", "1995-11-28", "Single", "Rruga Emin Duraku, Prizren, Kosovo, 20000", "+1122334455", "vjosa@example.com", "vjosaA95", "ac9d1e45b2e029bd27c8b9d6ab1d35a31a5f96c6923ad5fbbf28e6a33a66ee1d", "profile_picture_4.jpg", "Gaming, Yoga", "The Alchemist by Paulo Coelho, Inglourious Basterds, Lana Del Rey - Born to Die", "Bringing imagination to life through design."),
-("Arben", "Jashari", "M", "1983-09-12", "Married", "Rruga Bajram Kelmendi, Ferizaj, Kosovo, 70000", "+5544332211", "arben@example.com", "arbenJ83", "7d9903a0e9a7001e5d16064ab54cc80268b2a7a7a6c26a42e8cf0a15560c57a3", "profile_picture_5.jpg", "Running, Playing guitar", "Crime and Punishment by Fyodor Dostoevsky, The Beatles - A Hard Day's Night, Beethoven", "Healing with care and strumming melodies."),
-("Dafina", "Krasniqi", "F", "1992-06-25", "Single", "Rruga Trepça, Mitrovica, Kosovo, 40000", "+6677889900", "dafina@example.com", "dafinaK", "729c52fb14ffef860fd3da4db1de4c888b8c7c9c0fc9c1bda84edbe6a6de75a9", "profile_picture_6.jpg", "Traveling, Dancing", "The Great Gatsby by F. Scott Fitzgerald, La La Land, Michael Jackson - Thriller", "Coding, exploring, and dancing my way through life."),
-("Burim", "Hoxha", "M", "1975-12-03", "Married", "Rruga B, Prishtina, Kosovo, 10000", "+2233445566", "burim@example.com", "burimH75", "b9a2e6cc5e4870d1b0e940f378d4c09861cb2b8c46bbf90a53ed4eb69962d670", "profile_picture_7.jpg", "Playing Tennis, Reading", "To Kill a Mockingbird, The Shawshank Redemption, Mozart", "Fighting for justice and enjoying a good book."),
-("Aurela", "Aliu", "F", "1998-04-17", "Single", "Rruga Eqrem Qabej, Gjilan, Kosovo, 60000", "+7788990011", "aurela@example.com", "aurelaA", "7b9ab9d44a9f1175ba0c4a4e6cb5d0c31f7eb7b32c7e7f5f8018a2fe1db8a84c", "profile_picture_8.jpg", "Traveling, Photography", "Thinking, Fast and Slow by Daniel Kahneman, The Dark Knight, Ed Sheeran - ÷", "Marketing maven with an eye for capturing moments."),
-("Blerim", "Krasniqi", "M", "1980-07-08", "Divorced", "Rruga Xhemajl Rexha, Prizren, Kosovo, 20000", "+9900887766", "blerim@example.com", "blerimK80", "cb9f1d1b42932a86e8f741128822b041f45b89f18d9e739b5db40d3c73f6b7e1", "profile_picture_9.jpg", "Gardening, Cooking", "The Secret Garden by Frances Hodgson Burnett, Ratatouille, Coldplay - A Head Full of Dreams", "Creating spaces and flavors that inspire."),
-("Vesa", "Qorri", "F", "1993-02-22", "Single", "Rruga Eshref Frashëri, Peja, Kosovo, 30000", "+1122334455", "vesa@example.com", "vesaQ", "c3c68b99bebf3899dbb4967e0f99c4ac3842017e9a8e2e3dbf8b97f07910b183", "profile_picture_10.jpg", "Hiking, Writing poetry", "Into the Wild by Jon Krakauer, Interstellar, Ludovico Einaudi", "Crafting stories amidst serene trails and verses.");
+("Lirim", "Rexhepi", "M", "1990-05-15", "Married", "+1234567890", "lirim@example.com", "lirimRex90", "5d2e19393cc5a0310c49c5b460b4f3f61b0634ab189ab778de253282ba82c6ad", "profile_picture_1.jpg", "Hiking, Photography", "The Innovators by Walter Isaacson, Inception, Imagine Dragons - Night Visions", "Passionate about innovation and exploration."),
+("Albiona", "Berisha", "F", "1985-08-20", "Single", "+1987654321", "albiona@example.com", "albionaB", "2e2a0cc1d178b6348e9354fe1db7965e15d4d7f51cc321f534e4ee7b35eac623", "profile_picture_2.jpg", "Reading, Painting", "To Kill a Mockingbird, The Shawshank Redemption, Adele - 21", "Dedicated to shaping young minds through creativity."),
+("Dardan", "Gashi", "M", "1978-03-10", "Divorced", "+9876543210", "dardan@example.com", "dardanG78", "bfc1f66c583c12d5595c3d81e3ee95d07a1b1f0d17e660fb534c243ad76752f0", "profile_picture_3.jpg", "Cooking, Fishing", "The Intelligent Investor by Benjamin Graham, The Godfather, Pink Floyd - Dark Side of the Moon", "Detail-oriented numbers enthusiast and nature lover."),
+("Vjosa", "Ahmeti", "F", "1995-11-28", "Single", "+1122334455", "vjosa@example.com", "vjosaA95", "ac9d1e45b2e029bd27c8b9d6ab1d35a31a5f96c6923ad5fbbf28e6a33a66ee1d", "profile_picture_4.jpg", "Gaming, Yoga", "The Alchemist by Paulo Coelho, Inglourious Basterds, Lana Del Rey - Born to Die", "Bringing imagination to life through design."),
+("Arben", "Jashari", "M", "1983-09-12", "Married", "+5544332211", "arben@example.com", "arbenJ83", "7d9903a0e9a7001e5d16064ab54cc80268b2a7a7a6c26a42e8cf0a15560c57a3", "profile_picture_5.jpg", "Running, Playing guitar", "Crime and Punishment by Fyodor Dostoevsky, The Beatles - A Hard Day's Night, Beethoven", "Healing with care and strumming melodies."),
+("Dafina", "Krasniqi", "F", "1992-06-25", "Single", "+6677889900", "dafina@example.com", "dafinaK", "729c52fb14ffef860fd3da4db1de4c888b8c7c9c0fc9c1bda84edbe6a6de75a9", "profile_picture_6.jpg", "Traveling, Dancing", "The Great Gatsby by F. Scott Fitzgerald, La La Land, Michael Jackson - Thriller", "Coding, exploring, and dancing my way through life."),
+("Burim", "Hoxha", "M", "1975-12-03", "Married", "+2233445566", "burim@example.com", "burimH75", "b9a2e6cc5e4870d1b0e940f378d4c09861cb2b8c46bbf90a53ed4eb69962d670", "profile_picture_7.jpg", "Playing Tennis, Reading", "To Kill a Mockingbird, The Shawshank Redemption, Mozart", "Fighting for justice and enjoying a good book."),
+("Aurela", "Aliu", "F", "1998-04-17", "Single", "+7788990011", "aurela@example.com", "aurelaA", "7b9ab9d44a9f1175ba0c4a4e6cb5d0c31f7eb7b32c7e7f5f8018a2fe1db8a84c", "profile_picture_8.jpg", "Traveling, Photography", "Thinking, Fast and Slow by Daniel Kahneman, The Dark Knight, Ed Sheeran - ÷", "Marketing maven with an eye for capturing moments."),
+("Blerim", "Krasniqi", "M", "1980-07-08", "Divorced", "+9900887766", "blerim@example.com", "blerimK80", "cb9f1d1b42932a86e8f741128822b041f45b89f18d9e739b5db40d3c73f6b7e1", "profile_picture_9.jpg", "Gardening, Cooking", "The Secret Garden by Frances Hodgson Burnett, Ratatouille, Coldplay - A Head Full of Dreams", "Creating spaces and flavors that inspire."),
+("Vesa", "Qorri", "F", "1993-02-22", "Single", "+1122334455", "vesa@example.com", "vesaQ", "c3c68b99bebf3899dbb4967e0f99c4ac3842017e9a8e2e3dbf8b97f07910b183", "profile_picture_10.jpg", "Hiking, Writing poetry", "Into the Wild by Jon Krakauer, Interstellar, Ludovico Einaudi", "Crafting stories amidst serene trails and verses.");
 
 
 -- education table data
@@ -61,19 +61,42 @@ values
 
 
 -- company table data
-insert into `application`.`company`(company_name, logo, description, email_address, web_page, employee_count, company_type, established_year, address, map_location)
+insert into `application`.`company`(company_name, logo, description, email_address, web_page, employee_count, company_type, established_year, map_location)
 values
-("TechKosova", "techkosova_logo.png", "Leading technology solutions provider in Kosovo", "info@techkosova.com", "www.techkosova.com", 150, "Information Technology", 2010, "123 Teknologjia Street, Pristina, Kosovo, 10000", "https://www.google.com/maps/place/Pristina"),
-("Kosovo Manufacturing Co.", "kosman_logo.jpg", "Manufacturing and distribution services based in Kosovo", "contact@kosman.com", "www.kosman.com", 500, "Manufacturing", 1995, "456 Industry Lane, Peja, Kosovo, 20000", "https://www.google.com/maps/place/Peja"),
-("Innovate Kosovo", "innovatekosova_logo.png", "Innovative technology solutions provider located in Kosovo", "info@innovatekosova.com", "www.innovatekosova.com", 150, "Technology", 2008, "789 Innovation Road, Gjilan, Kosovo, 30000", "https://www.google.com/maps/place/Gjilan"),
-("Global Logistics Kosovo", "globalkosova_logo.png", "Global logistics and supply chain services in Kosovo", "info@globalkosova.com", "www.globalkosova.com", 300, "Logistics", 2002, "101 Logistics Avenue, Mitrovica, Kosovo, 40000", "https://www.google.com/maps/place/Mitrovica"),
-("Eco-Friendly Solutions Kosovo", "ecofriendlykosova_logo.jpg", "Sustainable and eco-friendly products based in Kosovo", "contact@ecofriendlykosova.com", "www.ecofriendlykosova.com", 75, "Environmental", 2015, "222 Green Street, Ferizaj, Kosovo, 50000", "https://www.google.com/maps/place/Ferizaj"),
-("HealthFirst Kosovo", "healthfirstkosova_logo.png", "Health and wellness products and services in Kosovo", "info@healthfirstkosova.com", "www.healthfirstkosova.com", 100, "Healthcare", 2012, "333 Wellness Avenue, Prizren, Kosovo, 60000", "https://www.google.com/maps/place/Prizren"),
-("Data Dynamics Kosovo", "datadynamicskosova_logo.png", "Data analytics and business intelligence in Kosovo", "info@datadynamicskosova.com", "www.datadynamicskosova.com", 250, "Analytics", 2007, "444 Data Street, Peja, Kosovo, 70000", "https://www.google.com/maps/place/Peja"),
-("Creative Designs Kosovo", "creativedesignskosova_logo.jpg", "Creative design and branding agency based in Kosovo", "contact@creativedesignskosova.com", "www.creativedesignskosova.com", 50, "Design", 2018, "555 Creativity Lane, Gjilan, Kosovo, 80000", "https://www.google.com/maps/place/Gjilan"),
-("Alpha Energy Kosovo", "alphaenergykosova_logo.png", "Renewable energy solutions and services in Kosovo", "info@alphaenergykosova.com", "www.alphaenergykosova.com", 120, "Energy", 2014, "666 Renewable Road, Pristina, Kosovo, 90000", "https://www.google.com/maps/place/Pristina"),
-("Tech Innovators Kosovo", "techinnovatorskosova_logo.png", "Cutting-edge technology innovations in Kosovo", "contact@techinnovatorskosova.com", "www.techinnovatorskosova.com", 180, "Technology", 2005, "777 Innovation Street, Prizren, Kosovo, 100000", "https://www.google.com/maps/place/Prizren");
+("TechKosova", "techkosova_logo.png", "Leading technology solutions provider in Kosovo", "info@techkosova.com", "www.techkosova.com", 150, "Information Technology", 2010,"https://www.google.com/maps/place/Pristina"),
+("Kosovo Manufacturing Co.", "kosman_logo.jpg", "Manufacturing and distribution services based in Kosovo", "contact@kosman.com", "www.kosman.com", 500, "Manufacturing", 1995,"https://www.google.com/maps/place/Peja"),
+("Innovate Kosovo", "innovatekosova_logo.png", "Innovative technology solutions provider located in Kosovo", "info@innovatekosova.com", "www.innovatekosova.com", 150, "Technology", 2008,"https://www.google.com/maps/place/Gjilan"),
+("Global Logistics Kosovo", "globalkosova_logo.png", "Global logistics and supply chain services in Kosovo", "info@globalkosova.com", "www.globalkosova.com", 300, "Logistics", 2020, "https://www.google.com/maps/place/Mitrovica"),
+("Eco-Friendly Solutions Kosovo", "ecofriendlykosova_logo.jpg", "Sustainable and eco-friendly products based in Kosovo", "contact@ecofriendlykosova.com", "www.ecofriendlykosova.com", 75, "Environmental", 2015, "https://www.google.com/maps/place/Ferizaj"),
+("HealthFirst Kosovo", "healthfirstkosova_logo.png", "Health and wellness products and services in Kosovo", "info@healthfirstkosova.com", "www.healthfirstkosova.com", 100, "Healthcare", 2012, "https://www.google.com/maps/place/Prizren"),
+("Data Dynamics Kosovo", "datadynamicskosova_logo.png", "Data analytics and business intelligence in Kosovo", "info@datadynamicskosova.com", "www.datadynamicskosova.com", 250, "Analytics", 2007, "https://www.google.com/maps/place/Peja"),
+("Creative Designs Kosovo", "creativedesignskosova_logo.jpg", "Creative design and branding agency based in Kosovo", "contact@creativedesignskosova.com", "www.creativedesignskosova.com", 50, "Design", 2018, "https://www.google.com/maps/place/Gjilan"),
+("Alpha Energy Kosovo", "alphaenergykosova_logo.png", "Renewable energy solutions and services in Kosovo", "info@alphaenergykosova.com", "www.alphaenergykosova.com", 120, "Energy", 2014, "https://www.google.com/maps/place/Pristina"),
+("Tech Innovators Kosovo", "techinnovatorskosova_logo.png", "Cutting-edge technology innovations in Kosovo", "contact@techinnovatorskosova.com", "www.techinnovatorskosova.com", 180, "Technology", 2005, "https://www.google.com/maps/place/Prizren");
 
+
+-- address table data
+insert into `application`.`address`(student_id, company_id, street_name, city, country, zip_code)
+values
+(1, null, "2 UCK", "Prishtina", "Kosovo", "10000"),
+(2, null, "18 Adem Jashari", "Gjakova", "Kosovo", "50000"),
+(3, null, "54 Hasan Prishtina", "Peja", "Kosovo", "30000"),
+(4, null, "13 Emin Duraku", "Prizren", "Kosovo", "20000"),
+(5, null, "32 Bajram Kelmendi", "Ferizaj", "Kosovo", "70000"),
+(6, null, "19 Trepça", "Mitrovica", "Kosovo", "40000"),
+(7, null, "84 Rruga B", "Prishtina", "Kosovo", "10000"),
+(9, null, "93 Eqrem Qabej", "Prishtina", "Kosovo", "10000"),
+(10, null, "47 Xhemajl Rexha", "Prizren", "Kosovo", "20000"),
+(null, 1, "123 Teknologjia Street", "Prishtina", "Kosovo", "10000"),
+(null, 2, "456 Industry Lane", "Peja", "Kosovo", "30000"),
+(null, 3, "789 Innovation Road", "Gjilan", "Kosovo", "80000"),
+(null, 4, "101 Logistics Avenue", "Mitrovica", "Kosovo", "40000"),
+(null, 5, "222 Green Street", "Ferizaj", "Kosovo", "50000"),
+(null, 6, "333 Wellness Avenue", "Prizren", "Kosovo", "20000"),
+(null, 7, "444 Data Street", "Peja", "Kosovo", "70000"),
+(null, 8, "555 Creativity Lane", "Gjilan", "Kosovo", "80000"),
+(null, 9, "666 Renewable Road", "Prishtina", "Kosovo", "10000"),
+(null, 10, "777 Innovation Street", "Prizren", "Kosovo", "20000");
 
 -- post table data
 insert into `application`.`post`(company_id, title, description, required_skills, desired_skills, job_type, location, posted_at, application_deadline, like_count)

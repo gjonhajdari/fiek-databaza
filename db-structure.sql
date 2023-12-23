@@ -10,7 +10,6 @@ create table if not exists `application`.`student`(
   gender char(1) not null,
   birthdate date not null,
   marriage_status nvarchar(8) not null,
-  address nvarchar(100) not null,
   phone_number nvarchar(20) not null,
   email_address nvarchar(320) not null,
   username nvarchar(32) not null,
@@ -88,9 +87,22 @@ create table if not exists `application`.`company`(
   employee_count int not null,
   company_type nvarchar(200) not null,
   established_year year not null,
-  address nvarchar(100) not null,
   map_location nvarchar(320),
   primary key (company_id)
+);
+
+-- address table
+create table if not exists `application`.`address`(
+  address_id int not null auto_increment,
+  student_id int,
+  company_id int,
+  street_name nvarchar(200) not null,
+  city nvarchar(200) not null,
+  country nvarchar(200) not null,
+  zip_code nvarchar(20) not null,
+  primary key (address_id),
+  foreign key (student_id) references student(student_id) on delete cascade,
+  foreign key (company_id) references company(company_id) on delete cascade
 );
 
 -- post table
