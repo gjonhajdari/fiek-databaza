@@ -75,3 +75,38 @@ WHERE
 GROUP BY c.company_id, c.company_name, a.city, c.email_address
 ORDER BY post_count DESC
 LIMIT 5;
+
+
+-- 6.
+-- Paraqitni top 3 pozitat në të cilat kanë aplikuar numër maksimal i studentëve (më së shumti) të cilët kanë së paku katër projekte të regjistruara në bazën e të dhënave. Lista të përmbaj këto të dhëna:
+-- - titulli i pozitës
+-- - emri i kompanisë që ka shpallur pozitën
+-- - numri i studentëve që kanë aplikuar
+-- - numri i pëlqimeve
+-- - numri i komenteve
+-- - numri i shpërndarjeve
+-- - data e publikimit të pozitës
+SELECT
+  p.title,
+  c.company_name,
+  COUNT(DISTINCT a.student_id) AS applicant_count,
+  p.like_count,
+  COUNT(DISTINCT co.comment_id) AS comment_count,
+  COUNT(DISTINCT r.repost_id) AS repost_count,
+  p.posted_at
+FROM post p
+JOIN company c ON p.company_id = c.company_id
+JOIN applied a ON p.post_id = a.post_id
+LEFT JOIN comment co ON p.post_id = co.post_id
+LEFT JOIN repost r ON p.post_id = r.post_id
+WHERE
+  a.student_id IN (
+    SELECT s.student_id
+    FROM student s
+    JOIN project pr ON s.student_id = pr.student_id
+    GROUP BY s.student_id
+    HAVING COUNT(pr.project_id) >= 4
+  )
+GROUP BY p.post_id
+ORDER BY applicant_count DESC
+LIMIT 3;
