@@ -87,7 +87,7 @@ values
 (7, null, "84 Rruga B", "Prishtina", "Kosovo", "10000"),
 (8, null, "93 Eqrem Qabej", "Prishtina", "Kosovo", "10000"),
 (9, null, "47 Xhemajl Rexha", "Prizren", "Kosovo", "20000"),
-(10, null, "24 Eshref Frashëri", "Peja", "Kosovo", "30000")
+(10, null, "24 Eshref Frashëri", "Peja", "Kosovo", "30000"),
 (null, 1, "123 Teknologjia Street", "Prishtina", "Kosovo",  "10000"),
 (null, 2, "456 Industry Lane", "Peja", "Kosovo", "30000"),
 (null, 3, "789 Innovation Road", "Gjilan", "Kosovo", "80000"),
