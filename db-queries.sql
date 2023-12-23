@@ -2,9 +2,13 @@ use application;
 
 -- 1.
 -- Listoni të gjithë studentët që janë nga qyteti i Prishtinës të cilët nuk kanë të regjistruar asnjë projekt.
-SELECT s.* FROM student s
-LEFT JOIN applied a ON a.student_id = s.student_id
-WHERE s.address LIKE "%Prishtina%"
+SELECT s.*
+FROM student s
+LEFT JOIN
+  applied a ON a.student_id = s.student_id
+JOIN
+  address addr ON s.student_id = addr.student_id
+WHERE addr.city = "Prishtina"
 AND a.student_id IS NULL;
 
 
