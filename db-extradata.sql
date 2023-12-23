@@ -31,3 +31,18 @@ insert into `application`.`applied`(student_id, post_id, resume, applied_at)
 values
 (2, 15, "resume_1.pdf", "2023-12-20 08:45"),
 (2, 16, "resume_1.pdf", "2023-12-20 08:45");
+
+insert into `application`.`project`(student_id, project_name, start_date, end_date, institution_name, location, description, role, web_page)
+values
+(2, "Title", "2022-03-01", "2022-06-30", "Institutuin", "Prishtina, Kosovo", "Description",  "Role", "www.website.com"),
+(2, "Title", "2022-03-01", "2022-06-30", "Institutuin", "Prishtina, Kosovo", "Description",  "Role", "www.website.com"),
+(2, "Title", "2022-03-01", "2022-06-30", "Institutuin", "Prishtina, Kosovo", "Description",  "Role", "www.website.com"),
+(2, "Title", "2022-03-01", "2022-06-30", "Institutuin", "Prishtina, Kosovo", "Description",  "Role", "www.website.com"),
+(3, "Title", "2022-03-01", "2022-06-30", "Institutuin", "Prishtina, Kosovo", "Description",  "Role", "www.website.com"),
+(3, "Title", "2022-03-01", "2022-06-30", "Institutuin", "Prishtina, Kosovo", "Description",  "Role", "www.website.com"),
+(3, "Title", "2022-03-01", "2022-06-30", "Institutuin", "Prishtina, Kosovo", "Description",  "Role", "www.website.com"),
+(3, "Title", "2022-03-01", "2022-06-30", "Institutuin", "Prishtina, Kosovo", "Description",  "Role", "www.website.com"),
+(5, "Title", "2022-03-01", "2022-06-30", "Institutuin", "Prishtina, Kosovo", "Description",  "Role", "www.website.com"),
+(5, "Title", "2022-03-01", "2022-06-30", "Institutuin", "Prishtina, Kosovo", "Description",  "Role", "www.website.com"),
+(5, "Title", "2022-03-01", "2022-06-30", "Institutuin", "Prishtina, Kosovo", "Description",  "Role", "www.website.com"),
+(5, "Title", "2022-03-01", "2022-06-30", "Institutuin", "Prishtina, Kosovo", "Description",  "Role", "www.website.com");
