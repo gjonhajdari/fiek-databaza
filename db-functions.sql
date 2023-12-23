@@ -21,3 +21,6 @@ BEGIN
 END //
 
 DELIMITER ;
+
+-- Using the function
+-- SELECT `application`.`CalculateExperience`(4) as total_experience;
