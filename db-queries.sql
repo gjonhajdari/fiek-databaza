@@ -21,9 +21,8 @@ JOIN repost r ON s.student_id = r.student_id
 WHERE
   (DATE(c.commented_at) = CURDATE() OR DATE(c.commented_at) = CURDATE() - INTERVAL 1 DAY)
   AND
-  (DATE(r.reposted_at) = CURDATE() OR DATE(r.reposted_at) = CURDATE() - INTERVAL 1 DAY);
-
-select * from application.`student`;
+  (DATE(r.reposted_at) = CURDATE() OR DATE(r.reposted_at) = CURDATE() - INTERVAL 1 DAY)
+GROUP BY s.student_id;
 
 
 -- 3.
