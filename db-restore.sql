@@ -42,5 +42,9 @@ drop procedure if exists `application`.`GetPostsByCompany`;
 -- deleting the functions
 drop function if exists `application`.`CalculateExperience`;
 
+-- deleting the views
+drop view if exists `application`.`latest_posts`;
+drop view if exists `application`.`student_with_skills`;
+
 -- deleting the entire database
 drop database `application`;
