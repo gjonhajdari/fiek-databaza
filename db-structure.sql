@@ -117,6 +117,8 @@ create table if not exists `application`.`post`(
   location nvarchar(50) not null,
   posted_at datetime not null default current_timestamp,
   application_deadline date not null,
+  active_start_date date not null, -- New column for active period start date
+  active_end_date date not null,   -- New column for active period end date
   like_count int not null default 0,
   primary key (post_id),
   foreign key (company_id) references company(company_id) on delete cascade
