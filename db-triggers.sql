@@ -80,3 +80,78 @@ END;
 //
 
 DELIMITER ;
+
+
+-- Trigger to enforce active period constraint for comment table
+DELIMITER //
+
+CREATE TRIGGER check_comment_active_period
+BEFORE INSERT ON `application`.`comment`
+FOR EACH ROW
+BEGIN
+  DECLARE start_date DATE;
+  DECLARE end_date DATE;
+
+  SELECT active_start_date, active_end_date
+  INTO start_date, end_date
+  FROM post
+  WHERE post_id = NEW.post_id;
+
+  IF NOT (NEW.commented_at BETWEEN start_date AND end_date) THEN
+    SIGNAL SQLSTATE '45000'
+    SET MESSAGE_TEXT = 'Comment not within active period';
+  END IF;
+END 
+//
+
+DELIMITER ;
+
+
+-- Trigger to enforce active period constraint for like table
+DELIMITER //
+
+CREATE TRIGGER check_like_active_period
+BEFORE INSERT ON `application`.`like`
+FOR EACH ROW
+BEGIN
+  DECLARE start_date DATE;
+  DECLARE end_date DATE;
+
+  SELECT active_start_date, active_end_date
+  INTO start_date, end_date
+  FROM post
+  WHERE post_id = NEW.post_id;
+
+  IF NOT (CURRENT_TIMESTAMP BETWEEN start_date AND end_date) THEN
+    SIGNAL SQLSTATE '45000'
+    SET MESSAGE_TEXT = 'Like not within active period';
+  END IF;
+END 
+//
+
+DELIMITER ;
+
+
+-- Trigger to enforce active period constraint for repost table
+DELIMITER //
+
+CREATE TRIGGER check_repost_active_period
+BEFORE INSERT ON `application`.`repost`
+FOR EACH ROW
+BEGIN
+  DECLARE start_date DATE;
+  DECLARE end_date DATE;
+
+  SELECT active_start_date, active_end_date
+  INTO start_date, end_date
+  FROM post
+  WHERE post_id = NEW.post_id;
+
+  IF NOT (NEW.reposted_at BETWEEN start_date AND end_date) THEN
+    SIGNAL SQLSTATE '45000'
+    SET MESSAGE_TEXT = 'Repost not within active period';
+  END IF;
+END 
+//
+
+DELIMITER ;
