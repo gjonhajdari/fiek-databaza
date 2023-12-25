@@ -4,21 +4,6 @@ SET @currentDateTime = DATE_FORMAT(NOW(), '%Y-%m-%d %H:%i');
 SET @yesterdayDateTime = DATE_FORMAT(NOW() - INTERVAL 1 DAY, '%Y-%m-%d %H:%i');
 SET @randomDate = DATE_FORMAT(NOW() - INTERVAL FLOOR(RAND() * 60) DAY, '%Y-%m-%d %H:%i');
 
-insert into `application`.`comment`(post_id, student_id, content, commented_at, like_count)
-values
-(1, 5, "Test 1", @currentDateTime, 2),
-(2, 5, "Test 2", @currentDateTime, 3),
-(6, 3, "Test 3", @yesterdayDateTime, 0),
-(8, 3, "Test 4", @yesterdayDateTime, 221);
-
-
-insert into `application`.`repost`(post_id, student_id, content, reposted_at, like_count)
-values
-(1, 5, null, @currentDateTime, 3),
-(2, 5, null, @currentDateTime, 0),
-(2, 3, null, @yesterdayDateTime, 0),
-(2, 3, null, @yesterdayDateTime, 0);
-
 
 insert into `application`.`post`(company_id, title, description, required_skills, desired_skills, job_type, location, posted_at, application_deadline, like_count)
 values
@@ -29,6 +14,22 @@ values
 (6, "Customer Support Specialist", "We are looking for a Customer Support Specialist to assist customers with product-related inquiries and provide exceptional service. The ideal candidate should have strong communication skills and a customer-centric approach.", "Excellent verbal and written communication, Problem-solving skills, Patience and empathy", "Experience with helpdesk software, Knowledge of the product or industry", "Full-time", "Prishtinë", @randomDate, "2024-08-05", 492),
 (4, "Title", "Desc", "Req", "Desired", "Full-time", "Prishtinë", @randomDate, "2024-02-20", 5),
 (7, "Title 2", "Desc", "Req", "Desired", "Full-time", "Prishtinë", @randomDate, "2024-01-05", 76);
+
+
+insert into `application`.`comment`(post_id, student_id, content, commented_at, like_count)
+values
+(11, 5, "Test 1", @currentDateTime, 2),
+(12, 5, "Test 2", @currentDateTime, 3),
+(16, 3, "Test 3", @yesterdayDateTime, 0),
+(14, 3, "Test 4", @yesterdayDateTime, 221);
+
+
+insert into `application`.`repost`(post_id, student_id, content, reposted_at, like_count)
+values
+(11, 5, null, @currentDateTime, 3),
+(11, 5, null, @currentDateTime, 0),
+(12, 3, null, @yesterdayDateTime, 0),
+(12, 3, null, @yesterdayDateTime, 0);
 
 
 insert into `application`.`applied`(student_id, post_id, resume, applied_at)
@@ -50,4 +51,9 @@ values
 (5, "Title", "2022-03-01", "2022-06-30", "Institution", "Prishtina, Kosovo", "Description",  "Role", "www.website.com"),
 (5, "Title", "2022-03-01", "2022-06-30", "Institution", "Prishtina, Kosovo", "Description",  "Role", "www.website.com"),
 (5, "Title", "2022-03-01", "2022-06-30", "Institution", "Prishtina, Kosovo", "Description",  "Role", "www.website.com"),
-(5, "Title", "2022-03-01", "2022-06-30", "Institution", "Prishtina, Kosovo", "Description",  "Role", "www.website.com");
+(6, "Title", "2022-03-01", "2022-06-30", "Institution", "Prishtina, Kosovo", "Description",  "Role", "www.website.com"),
+(6, "Title", "2022-03-01", "2022-06-30", "Institution", "Prishtina, Kosovo", "Description",  "Role", "www.website.com"),
+(6, "Title", "2022-03-01", "2022-06-30", "Institution", "Prishtina, Kosovo", "Description",  "Role", "www.website.com"),
+(6, "Title", "2022-03-01", "2022-06-30", "Institution", "Prishtina, Kosovo", "Description",  "Role", "www.website.com"),
+(6, "Title", "2022-03-01", "2022-06-30", "Institution", "Prishtina, Kosovo", "Description",  "Role", "www.website.com"),
+(6, "Title", "2022-03-01", "2022-06-30", "Institution", "Prishtina, Kosovo", "Description",  "Role", "www.website.com");
