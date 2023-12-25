@@ -24,6 +24,84 @@ END;
 DELIMITER ;
 
 
+-- Trigger that checks if the deadline for a post has passed when commenting
+DELIMITER //
+
+CREATE TRIGGER `application`.`check_comment_deadline`
+BEFORE INSERT ON `application`.`comment`
+FOR EACH ROW
+BEGIN
+    DECLARE deadline_passed BOOLEAN;
+
+    -- Check if the application deadline has passed
+    SELECT TRUE INTO deadline_passed
+    FROM `application`.`post`
+    WHERE post_id = NEW.post_id
+    AND DATE(application_deadline) < DATE(NEW.commented_at);
+
+    -- If the deadline has passed, raise an error
+    IF deadline_passed THEN
+        SIGNAL SQLSTATE "45000"
+        SET MESSAGE_TEXT = "Active post period has passed. Cannot comment.";
+    END IF;
+END;
+//
+
+DELIMITER ;
+
+
+-- Trigger that checks if the deadline for a post has passed when reposting
+DELIMITER //
+
+CREATE TRIGGER `application`.`check_repost_deadline`
+BEFORE INSERT ON `application`.`repost`
+FOR EACH ROW
+BEGIN
+    DECLARE deadline_passed BOOLEAN;
+
+    -- Check if the application deadline has passed
+    SELECT TRUE INTO deadline_passed
+    FROM `application`.`post`
+    WHERE post_id = NEW.post_id
+    AND DATE(application_deadline) < DATE(NEW.reposted_at);
+
+    -- If the deadline has passed, raise an error
+    IF deadline_passed THEN
+        SIGNAL SQLSTATE "45000"
+        SET MESSAGE_TEXT = "Active post period has passed. Cannot repost.";
+    END IF;
+END;
+//
+
+DELIMITER ;
+
+
+-- Trigger that checks if the deadline for a post has passed when liking
+DELIMITER //
+
+CREATE TRIGGER `application`.`check_like_deadline`
+BEFORE INSERT ON `application`.`like`
+FOR EACH ROW
+BEGIN
+    DECLARE deadline_passed BOOLEAN;
+
+    -- Check if the application deadline has passed
+    SELECT TRUE INTO deadline_passed
+    FROM `application`.`post`
+    WHERE post_id = NEW.post_id
+    AND DATE(application_deadline) < DATE(NEW.liked_at);
+
+    -- If the deadline has passed, raise an error
+    IF deadline_passed THEN
+        SIGNAL SQLSTATE "45000"
+        SET MESSAGE_TEXT = "Active post period has passed. Cannot like.";
+    END IF;
+END;
+//
+
+DELIMITER ;
+
+
 -- Trigger for updating like_count of the respective table when a new like is inserted
 DELIMITER //
 
@@ -77,81 +155,6 @@ BEGIN
         WHERE comment_id = OLD.comment_id;
     END IF;
 END;
-//
-
-DELIMITER ;
-
-
--- Trigger to enforce active period constraint for comment table
-DELIMITER //
-
-CREATE TRIGGER check_comment_active_period
-BEFORE INSERT ON `application`.`comment`
-FOR EACH ROW
-BEGIN
-  DECLARE start_date DATE;
-  DECLARE end_date DATE;
-
-  SELECT active_start_date, active_end_date
-  INTO start_date, end_date
-  FROM post
-  WHERE post_id = NEW.post_id;
-
-  IF NOT (NEW.commented_at BETWEEN start_date AND end_date) THEN
-    SIGNAL SQLSTATE '45000'
-    SET MESSAGE_TEXT = 'Comment not within active period';
-  END IF;
-END 
-//
-
-DELIMITER ;
-
-
--- Trigger to enforce active period constraint for like table
-DELIMITER //
-
-CREATE TRIGGER check_like_active_period
-BEFORE INSERT ON `application`.`like`
-FOR EACH ROW
-BEGIN
-  DECLARE start_date DATE;
-  DECLARE end_date DATE;
-
-  SELECT active_start_date, active_end_date
-  INTO start_date, end_date
-  FROM post
-  WHERE post_id = NEW.post_id;
-
-  IF NOT (CURRENT_TIMESTAMP BETWEEN start_date AND end_date) THEN
-    SIGNAL SQLSTATE '45000'
-    SET MESSAGE_TEXT = 'Like not within active period';
-  END IF;
-END 
-//
-
-DELIMITER ;
-
-
--- Trigger to enforce active period constraint for repost table
-DELIMITER //
-
-CREATE TRIGGER check_repost_active_period
-BEFORE INSERT ON `application`.`repost`
-FOR EACH ROW
-BEGIN
-  DECLARE start_date DATE;
-  DECLARE end_date DATE;
-
-  SELECT active_start_date, active_end_date
-  INTO start_date, end_date
-  FROM post
-  WHERE post_id = NEW.post_id;
-
-  IF NOT (NEW.reposted_at BETWEEN start_date AND end_date) THEN
-    SIGNAL SQLSTATE '45000'
-    SET MESSAGE_TEXT = 'Repost not within active period';
-  END IF;
-END 
 //
 
 DELIMITER ;
