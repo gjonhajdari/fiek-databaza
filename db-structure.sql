@@ -117,8 +117,6 @@ create table if not exists `application`.`post`(
   location nvarchar(50) not null,
   posted_at datetime not null default current_timestamp,
   application_deadline date not null,
-  active_start_date date not null, 
-  active_end_date date not null,  
   like_count int not null default 0,
   primary key (post_id),
   foreign key (company_id) references company(company_id) on delete cascade
@@ -156,7 +154,8 @@ create table if not exists `application`.`like`(
   student_id int,
   post_id int,
   repost_id int,
-  comment_id int, 
+  comment_id int,
+  liked_at datetime not null default current_timestamp,
   primary key (like_id),
   foreign key (student_id) references student(student_id) on delete cascade,
   foreign key (post_id) references post(post_id) on delete cascade,
