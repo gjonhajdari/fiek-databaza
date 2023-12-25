@@ -147,57 +147,57 @@ values
 -- like table data
 insert into `application`.`like`(student_id, post_id, repost_id, comment_id, liked_at)
 values
-(2, null, null, 3, '2022-12-24 13:30'),
-(7, 2, null, null, '2022-03-30 12:00'),
-(9, null, 7, null, '2022-04-29 18:30'),
+(2, null, null, 3, "2022-12-24 13:30"),
+(7, 2, null, null, "2022-03-30 12:00"),
+(9, null, 7, null, "2022-04-29 18:30"),
 (3, null, null, 2, "2023-07-02 16:25"),
-(1, 2, null, null, '2022-03-30 09:00'),
+(1, 2, null, null, "2022-03-30 09:00"),
 (3, null, null, 4, "2022-10-13 04:35"),
-(5, 6, null, null, '2022-08-04 11:45'),
-(5, 8, null, null, '2022-09-30 16:15'),
-(7, null, 10, null, '2022-01-17 20:30'),
-(10, 3, null, null, '2022-06-09 14:15');
+(5, 6, null, null, "2022-08-04 11:45"),
+(5, 8, null, null, "2022-09-30 16:15"),
+(7, null, 10, null, "2022-01-17 20:30"),
+(10, 3, null, null, "2022-06-09 14:15");
 
 
 
 -- volunteering table data
 insert into `application`.`volunteering`(student_id, position, company_name, start_date, end_date)
 values
-(10, 'Volunteer Coordinator', 'Future Hope Kosovo', '2023-01-15', '2023-06-30'),
-(7, 'Event Assistant', 'Unity Community Center Pristina', '2023-02-10', '2023-05-20'),
-(2, 'Community Outreach Specialist', 'Kosova Food Bank', '2023-03-05', '2023-09-15'),
-(1, 'Mentorship Program Manager', 'Progress Education Foundation Kosovo', '2023-04-20', '2023-11-30'),
-(3, 'Fundraising Coordinator', 'Animal Rescue Kosovo', '2023-05-12', '2023-08-25'),
-(4, 'Marketing Volunteer', 'Health First Clinic Prizren', '2023-06-08', '2023-12-10'),
-(6, 'Research Assistant', 'Environmental Protection Institute Kosovo', '2023-07-01', '2023-10-18'),
-(5, 'Volunteer Trainer', 'Red Cross Kosovo', '2023-08-14', '2024-01-05'),
-(8, 'Social Media Manager', 'Youth Empowerment Center Gjilan', '2023-09-19', '2024-02-20'),
-(9, 'Administrative Support', 'Elderly Care Foundation Pristina', '2023-10-22', '2024-03-15');
+(10, "Volunteer Coordinator", "Future Hope Kosovo", "2023-01-15", "2023-06-30"),
+(7, "Event Assistant", "Unity Community Center Pristina", "2023-02-10", "2023-05-20"),
+(2, "Community Outreach Specialist", "Kosova Food Bank", "2023-03-05", "2023-09-15"),
+(1, "Mentorship Program Manager", "Progress Education Foundation Kosovo", "2023-04-20", "2023-11-30"),
+(3, "Fundraising Coordinator", "Animal Rescue Kosovo", "2023-05-12", "2023-08-25"),
+(4, "Marketing Volunteer", "Health First Clinic Prizren", "2023-06-08", "2023-12-10"),
+(6, "Research Assistant", "Environmental Protection Institute Kosovo", "2023-07-01", "2023-10-18"),
+(5, "Volunteer Trainer", "Red Cross Kosovo", "2023-08-14", "2024-01-05"),
+(8, "Social Media Manager", "Youth Empowerment Center Gjilan", "2023-09-19", "2024-02-20"),
+(9, "Administrative Support", "Elderly Care Foundation Pristina", "2023-10-22", "2024-03-15");
 
 
 -- professional skills data
 insert into `application`.`skill`(student_id, skill_name)
 values
-(5, 'Java Programming'),
-(2, 'Data Analysis'),
-(8, 'Graphic Design'),
-(10, 'Machine Learning'),
-(3, 'Web Development'),
-(1, 'Project Management'),
-(6, 'Digital Marketing'),
-(9, 'Mobile App Development'),
-(4, 'Content Writing'),
-(7, 'Database Management'),
-(5, 'C++ Programming'),
-(10, 'Network Administration'),
-(2, 'UI/UX Design'),
-(9, 'Statistical Analysis'),
-(1, 'Cloud Computing'),
-(8, 'Social Media Management'),
-(3, 'SEO Optimization'),
-(6, 'Financial Modeling'),
-(7, 'Creative Writing'),
-(4, 'Customer Service');
+(5, "Java Programming"),
+(2, "Data Analysis"),
+(8, "Graphic Design"),
+(10, "Machine Learning"),
+(3, "Web Development"),
+(1, "Project Management"),
+(6, "Digital Marketing"),
+(9, "Mobile App Development"),
+(4, "Content Writing"),
+(7, "Database Management"),
+(5, "C++ Programming"),
+(10, "Network Administration"),
+(2, "UI/UX Design"),
+(9, "Statistical Analysis"),
+(1, "Cloud Computing"),
+(8, "Social Media Management"),
+(3, "SEO Optimization"),
+(6, "Financial Modeling"),
+(7, "Creative Writing"),
+(4, "Customer Service");
 
 
 -- saved_post table data
@@ -234,13 +234,13 @@ values
 -- language table data
 insert into `application`.`language`(student_id, language)
 values
-(1, 'English, Spanish, French, German, Albanian'),
-(2, 'Mandarin, Japanese, Albanian'),
-(3, 'Russian, Italian, Albanian'),
-(4, 'Portuguese, Albanian'),
-(5, 'Arabic, Spanish, Albanian'),
-(6, 'French, German, Albanian'),
-(7, 'Japanese, Italian, Albanian'),
-(8, 'Albanian, Bosnian, Turkish'),
-(9, 'English, French, Spanish, Albanian'),
-(10, 'Spanish, Albanian');
+(1, "English, Spanish, French, German, Albanian"),
+(2, "Mandarin, Japanese, Albanian"),
+(3, "Russian, Italian, Albanian"),
+(4, "Portuguese, Albanian"),
+(5, "Arabic, Spanish, Albanian"),
+(6, "French, German, Albanian"),
+(7, "Japanese, Italian, Albanian"),
+(8, "Albanian, Bosnian, Turkish"),
+(9, "English, French, Spanish, Albanian"),
+(10, "Spanish, Albanian");

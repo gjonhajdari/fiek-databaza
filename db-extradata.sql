@@ -1,8 +1,8 @@
 -- Extra data to match the requirements of some of the queries
 
-SET @currentDateTime = DATE_FORMAT(NOW(), '%Y-%m-%d %H:%i');
-SET @yesterdayDateTime = DATE_FORMAT(NOW() - INTERVAL 1 DAY, '%Y-%m-%d %H:%i');
-SET @randomDate = DATE_FORMAT(NOW() - INTERVAL FLOOR(RAND() * 60) DAY, '%Y-%m-%d %H:%i');
+SET @currentDateTime = DATE_FORMAT(NOW(), "%Y-%m-%d %H:%i");
+SET @yesterdayDateTime = DATE_FORMAT(NOW() - INTERVAL 1 DAY, "%Y-%m-%d %H:%i");
+SET @randomDate = DATE_FORMAT(NOW() - INTERVAL FLOOR(RAND() * 60) DAY, "%Y-%m-%d %H:%i");
 
 
 insert into `application`.`post`(company_id, title, description, required_skills, desired_skills, job_type, location, posted_at, application_deadline, like_count)
