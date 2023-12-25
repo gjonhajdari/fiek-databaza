@@ -117,46 +117,47 @@ values
 -- comment table data
 insert into `application`.`comment`(post_id, student_id, content, commented_at, like_count)
 values
-(1, 5, "This post on job interviews is too basic. Everyone knows you should dress well and be confident. Nothing groundbreaking here.", "2023-02-02 14:30", 221),
-(2, 2, "The post about overcoming job search burnout really resonated with me. It's tough out there, and these strategies are a breath of fresh air. Great advice!", "2023-06-24 10:45", 120),
-(3, 3, "Soft skills? Seriously? I just want a job that pays well. This touchy-feely stuff won't put food on the table.", "2022-12-12 16:20", 50),
-(4, 4, "Remote work pros and cons are well-balanced. This helps individuals make informed decisions about whether remote work is the right fit for them. Great perspective!", "2022-09-29 09:15", 3),
-(5, 5, "The post on overcoming job search burnout is just a list of generic motivational quotes. Not helpful at all. Waste of time reading this.", "2023-10-19 11:50", 112),
-(6, 6, "Remote work is just an excuse for people to slack off. This post is overly optimistic about the benefits. It's not all rainbows and butterflies.", "2023-05-01 08:30", 8),
-(7, 7, "The strategies mentioned here are practical and realistic. It's comforting to know that others have faced job search burnout and found effective ways to overcome it. Solid advice!", "2022-04-23 14:10", 76),
-(8, 8, "The gig economy is a disaster. This post makes it sound like it's all sunshine and rainbows. Freelancers struggle with job insecurity and unstable income. This post is misleading.", "2023-03-28 13:25", 232),
-(9, 9, "Emphasizing the importance of continuous learning is spot-on. This post motivates me to invest in my skills for long-term career growth. Great insights!", "2022-10-10 17:40", 13),
-(10, 10, "Work-life balance is a luxury for the privileged. Not everyone can afford to balance when they're struggling to make ends meet. This post is out of touch with reality.", "2023-12-12 15:15", 23);
+(1, 5, "This post on job interviews is too basic. Everyone knows you should dress well and be confident. Nothing groundbreaking here.", "2022-03-12 14:30", 221),
+(2, 2, "The post about overcoming job search burnout really resonated with me. It's tough out there, and these strategies are a breath of fresh air. Great advice!", "2022-04-05 10:45", 120),
+(3, 3, "Soft skills? Seriously? I just want a job that pays well. This touchy-feely stuff won't put food on the table.", "2022-05-13 16:20", 50),
+(4, 4, "Remote work pros and cons are well-balanced. This helps individuals make informed decisions about whether remote work is the right fit for them. Great perspective!", "2022-07-13 09:15", 3),
+(5, 5, "The post on overcoming job search burnout is just a list of generic motivational quotes. Not helpful at all. Waste of time reading this.", "2022-09-02 11:50", 112),
+(6, 6, "Remote work is just an excuse for people to slack off. This post is overly optimistic about the benefits. It's not all rainbows and butterflies.", "2022-09-24 08:30", 8),
+(7, 7, "The strategies mentioned here are practical and realistic. It's comforting to know that others have faced job search burnout and found effective ways to overcome it. Solid advice!", "2022-11-03 14:10", 76),
+(8, 8, "The gig economy is a disaster. This post makes it sound like it's all sunshine and rainbows. Freelancers struggle with job insecurity and unstable income. This post is misleading.", "2022-11-28 13:25", 232),
+(9, 9, "Emphasizing the importance of continuous learning is spot-on. This post motivates me to invest in my skills for long-term career growth. Great insights!", "2023-01-04 17:40", 13),
+(10, 10, "Work-life balance is a luxury for the privileged. Not everyone can afford to balance when they're struggling to make ends meet. This post is out of touch with reality.", "2022-12-12 15:15", 23);
 
 
 -- repost table data
 insert into `application`.`repost`(post_id, student_id, content, reposted_at, like_count)
 values
-(1, 5, null, "2023-02-02 11:45", 127),
-(2, 2, null, "2023-06-24 14:20", 289),
-(10, 6, "Hey creative minds! I just came across this incredible Graphic Designer position at Creative Designs Kosovo and had to share it with you. If you're a talented designer looking for a new challenge, this could be your next big move!", "2022-12-12 09:30", 73),
-(4, 4, null, "2022-09-29 16:10", 215),
-(2, 3, null, "2023-10-19 12:55", 58),
-(6, 6, null, "2023-05-01 08:15", 198),
-(7, 10, null, "2022-04-23 13:40", 104),
-(4, 6, null, "2023-03-28 10:05", 276),
-(9, 9, null, "2022-10-10 14:25", 35),
-(8, 6, null, "2023-12-12 15:40", 149);
+(1, 5, null, "2022-03-02 11:45", 127),
+(2, 2, null, "2022-04-24 14:20", 289),
+(6, 6, "Hey creative minds! I just came across this incredible Graphic Designer position at Creative Designs Kosovo and had to share it with you. If you're a talented designer looking for a new challenge, this could be your next big move!", "2022-10-01 09:30", 73),
+(4, 4, null, "2022-07-29 16:10", 215),
+(2, 3, null, "2022-04-24 12:55", 58),
+(6, 6, null, "2022-09-17 08:15", 198),
+(7, 10, null, "2022-10-23 13:40", 104),
+(4, 6, null, "2022-07-28 10:05", 276),
+(9, 9, null, "2022-12-03 14:25", 35),
+(8, 6, null, "2022-11-07 15:40", 149);
 
 
 -- like table data
-insert into `application`.`like`(student_id, post_id, repost_id, comment_id)
+insert into `application`.`like`(student_id, post_id, repost_id, comment_id, liked_at)
 values
-(2, null, null, 3),
-(7, 2, null, null),
-(9, null, 7, null),
-(3, null, null, 2),
-(1, 2, null, null),
-(3, null, null, 4),
-(5, 6, null, null),
-(5, 8, null, null),
-(7, null, 10, null),
-(10, 3, null, null);
+(2, null, null, 3, '2022-12-24 13:30'),
+(7, 2, null, null, '2022-03-30 12:00'),
+(9, null, 7, null, '2022-04-29 18:30'),
+(3, null, null, 2, "2023-07-02 16:25"),
+(1, 2, null, null, '2022-03-30 09:00'),
+(3, null, null, 4, "2022-10-13 04:35"),
+(5, 6, null, null, '2022-08-04 11:45'),
+(5, 8, null, null, '2022-09-30 16:15'),
+(7, null, 10, null, '2022-01-17 20:30'),
+(10, 3, null, null, '2022-06-09 14:15');
+
 
 
 -- volunteering table data
