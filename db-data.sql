@@ -220,6 +220,7 @@ insert into `application`.`applied`(student_id, post_id, resume, applied_at)
 values
 (2, 1, "resume_1.pdf", "2022-03-11 08:45"),
 (3, 1, "resume_2.pdf", "2022-03-05 15:20"),
+(6, 1, "resume_3.pdf", "2022-02-18 12:30"),
 (5, 9, "resume_3.pdf", "2022-06-08 12:30"),
 (5, 10, "resume_4.pdf", "2022-08-01 09:15"),
 (6, 8, "resume_5.pdf", "2022-09-18 17:40"),
