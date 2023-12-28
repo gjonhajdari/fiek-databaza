@@ -6,16 +6,18 @@ Result(SID,FN,LN) :- T1(SID, FN, LN, C), C = "Prishtinë", not T1(SID).
 
 
 % Query 2
-T1(SID) :- Comments(CID, SID, PID, PC, CD), CD = 'Yesterday'.
-T1(SID) :- Comments(CID, SID, PID, PC, CD), CD = 'Today'.
-T2(SID) :- Comments(CID, SID, PID, PC, CD), Shares(SHID, SID, PID, SM, SD), CD='Yesterday'; CD='Today'.
+T1(SID) :- Comments(CID, SID, PID, PC, C, CA, L), CA = Yesterday.
+T2(SID) :- Comments(CID, SID, PID, PC, C, CA, L), CA = Today.
+T3(SID) :- Repost(RID, SID, PID, C, RA, L), RA = Yesterday.
+T4(SID) :- Repost(RID, SID, PID, C, RA, L), RA = Today.
+T5(SID) :- T1(SID), T2(SID), T3(SID), T4(SID).
 
 Result(SID, FN, LN) :-
-  Student(SID, FN, LN, G, M, A, PH, E, U, PA, S, H, B, D), T2(SID).
+  Student(SID, FN, LN, G, M, A, PH, E, U, PA, S, H, B, D), T5(SID).
 
 
 % Query 3
-T1(PID) :- Project(PID, SID, PN, SD, ED, I, L, D, R, W), ED='current_month', L="Prishtinë".
+T1(PID) :- Project(PID, SID, PN, SD, ED, I, L, D, R, W), ED = 'current_month', L = "Prishtinë".
 T2(SID, PID) :- Applying (AID, SID, PID, AD)
  
 Result(PID, PN, ED, L) :- T1(PID), not T2(SID, PID), Project(PID, PN, ED, L).
