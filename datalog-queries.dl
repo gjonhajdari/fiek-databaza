@@ -1,7 +1,8 @@
 % Query 1
-T1(SID) :- Project(PID,SID,PN,SD,ED,I,L,D,R,W).
+T1(SID, FN, LN, C) :- Student(SID,FN,LN,G,M,A,PH,E,U,PA,S,H,B,D), Address(SID,CID,S,C,COU,Z).
+T2(SID) :- Project(PID,SID,PN,SD,ED,I,L,D,R,W).
 
-Result(SID,FN,LN) :- Student(SID,FN,LN,G,M,A,PH,E,U,PA,S,H,B,D), A = "Prishtinë", not T1(SID).
+Result(SID,FN,LN) :- T1(SID, FN, LN, C), C = "Prishtinë", not T1(SID).
 
 
 % Query 2
