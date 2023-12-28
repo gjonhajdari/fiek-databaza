@@ -17,15 +17,15 @@ Result(SID, FN, LN) :-
 
 
 % Query 3
-T1(PID) :- Project(PID, SID, PN, SD, ED, I, L, D, R, W), ED = 'current_month', L = "Prishtinë".
-T2(SID, PID) :- Applying (AID, SID, PID, AD)
+T1(PID) :- Project(PID, SID, PN, SD, ED, I, L, D, R, W), ED = current_month, L = "Prishtinë".
+T2(SID, PID) :- Applying(AID, SID, PID, AD)
  
 Result(PID, PN, ED, L) :- T1(PID), not T2(SID, PID), Project(PID, PN, ED, L).
 
 
 % Query 4
 T1(SID, PID) :- Applying(SID, PID, AD), AD = 'Yesterday'.
-T2(SID, PID) :- Applying(SID, PID, AD), AD= 'Today'.
+T2(SID, PID) :- Applying(SID, PID, AD), AD = 'Today'.
 
 Result(SID, FN, LN) :- Student(SID,FN,LN,G,M,A,PH,E,U,PA,S,H,B,D),
   T1(SID, PID),
