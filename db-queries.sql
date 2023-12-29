@@ -5,11 +5,11 @@ use application;
 SELECT s.*
 FROM student s
 LEFT JOIN
-  applied a ON a.student_id = s.student_id
+  applied appl ON appl.student_id = s.student_id
 JOIN
   address addr ON s.student_id = addr.student_id
 WHERE addr.city = "Prishtina"
-AND a.student_id IS NULL;
+AND appl.student_id IS NULL;
 
 
 -- 2.
